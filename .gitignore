@@ -11,3 +11,12 @@
 *.lai
 *.la
 *.a
+
+# VS files
+*.sdf
+*.suo
+*.user
+*.filters
+Debug/
+Release/
+ipch/
