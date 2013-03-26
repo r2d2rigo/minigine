@@ -15,7 +15,7 @@ namespace Minigine
 
 		void VertexBuffer::SetData(int dataSize, void* data)
 		{
-			glBufferData(GL_ARRAY_BUFFER, dataSize, data, this->GetDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW);
+			glBufferData(GL_ARRAY_BUFFER, dataSize, data, this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW);
 		}
 	}
 }

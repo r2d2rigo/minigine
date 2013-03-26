@@ -14,7 +14,7 @@ namespace Minigine
 
 		public:
 			const unsigned int& GetHandle() { return this->handle; }
-			const bool& GetDynamic() const { return this->dynamic; }
+			const bool& IsDynamic() const { return this->dynamic; }
 			void SetData(int dataSize, void* data);
 
 		public:

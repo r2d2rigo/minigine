@@ -15,7 +15,7 @@ namespace Minigine
 
 		void IndexBuffer::SetData(int dataSize, void* data)
 		{
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, this->GetDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW);
 		}
 	}
 }
