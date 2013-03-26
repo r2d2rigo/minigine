@@ -14,7 +14,14 @@ namespace Minigine
 	{
 		class MINIGINE_API GraphicsDevice
 		{
+		private:
+			int screenWidth;
+			int screenHeight;
+
 		public:
+			const int& GetScreenWidth() const { return this->screenWidth; }
+			const int& GetScreenHeight() const { return this->screenHeight; }
+
 			void SetIndexBuffer(const IndexBuffer& indexBuffer);
 			void SetVertexBuffer(const VertexBuffer& vertexBuffer);
 

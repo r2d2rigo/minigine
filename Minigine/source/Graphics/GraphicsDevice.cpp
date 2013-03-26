@@ -7,6 +7,8 @@ namespace Minigine
 	{
 		GraphicsDevice::GraphicsDevice(int screenWidth, int screenHeight, bool fullScreen)
 		{
+			this->screenWidth = screenWidth;
+			this->screenHeight = screenHeight;
 		}
 
 		void GraphicsDevice::SetIndexBuffer(const IndexBuffer& indexBuffer)
