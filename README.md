@@ -1,4 +1,4 @@
 minigine
 ========
 
-Small C++/OpenGL that will be updated when I'm bored.
+Small C++/SMFL/OpenGL engine that will be updated when I'm bored.
