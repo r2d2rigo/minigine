@@ -2,6 +2,7 @@
 #include <Graphics\SpriteBatch.hpp>
 
 Minigame::Minigame()
+	: Game(GraphicsDevice(1024, 768)), spriteBatch(graphicsDevice)
 {
 }
 
@@ -14,7 +15,7 @@ void Minigame::Draw(float elapsedTime)
 	GetGraphicsDevice().Clear(Minigine::Graphics::Color::Blue);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-	gluOrtho2D(0.0f, 800.0f, 600.0f, 0.0f);
+	gluOrtho2D(0.0f, this->graphicsDevice.GetScreenWidth(), this->graphicsDevice.GetScreenHeight(), 0.0f);
     //gluPerspective(90.f, 1.f, 1.f, 500.f);
 
         // Apply some transformations
