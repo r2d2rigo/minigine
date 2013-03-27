@@ -84,6 +84,7 @@
     <ClInclude Include="include\Graphics\Color.hpp" />
     <ClInclude Include="include\Graphics\IndexBuffer.hpp" />
     <ClInclude Include="include\Graphics\SpriteBatch.hpp" />
+    <ClInclude Include="include\Graphics\Texture2D.hpp" />
     <ClInclude Include="include\Graphics\VertexBuffer.hpp" />
     <ClInclude Include="include\InvalidOperationException.hpp" />
     <ClInclude Include="include\Math\Vector2F.hpp" />
@@ -105,6 +106,7 @@
     <ClCompile Include="source\Graphics\Color.cpp" />
     <ClCompile Include="source\Graphics\IndexBuffer.cpp" />
     <ClCompile Include="source\Graphics\SpriteBatch.cpp" />
+    <ClCompile Include="source\Graphics\Texture2D.cpp" />
     <ClCompile Include="source\Graphics\VertexBuffer.cpp" />
     <ClCompile Include="source\InvalidOperationException.cpp" />
     <ClCompile Include="source\Math\Vector2F.cpp" />
