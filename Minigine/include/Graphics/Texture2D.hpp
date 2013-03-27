@@ -16,6 +16,7 @@ namespace Minigine
 			int height;
 
 		public:
+			const unsigned int& GetHandle() const { return this->handle; }
 			const int& GetWidth() const { return this->width; }
 			const int& GetHeight() const { return this->height; }
 			void SetWidth(const int& textureWidth) { this->width = textureWidth; }

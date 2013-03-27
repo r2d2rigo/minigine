@@ -6,6 +6,7 @@
 #include "Graphics/BatchElement.hpp"
 #include "Graphics/Color.hpp"
 #include "Graphics/GraphicsDevice.hpp"
+#include "Graphics/Texture2D.hpp"
 #include "InvalidOperationException.hpp"
 
 using std::vector;
@@ -33,6 +34,8 @@ namespace Minigine
 
 			void Begin() throw(...);
 			void Draw(const Vector2F& position, const Vector2F& size, const Color& color);
+			void Draw(const Texture2D& texture, const Vector2F& position, const Color& color);
+			void Draw(const Texture2D& texture, const Vector2F& position, const Vector2F& size, const Color& color);
 			void End() throw(...);
 		};
 
