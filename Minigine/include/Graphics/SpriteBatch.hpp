@@ -18,6 +18,9 @@ namespace Minigine
 		class MINIGINE_API SpriteBatch
 		{
 		private:
+			static const int MaxBatchSize = 512;
+
+		private:
 			GraphicsDevice graphicsDevice;
 
 			bool alreadyDrawing;

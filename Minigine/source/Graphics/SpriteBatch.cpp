@@ -8,7 +8,7 @@ namespace Minigine
 			: graphicsDevice(parentDevice)
 		{
 			this->alreadyDrawing = false;
-			this->elements = vector<BatchElement>(512);
+			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
 			this->elementCount = 0;
 
 			this->graphicsDevice = parentDevice;
@@ -30,7 +30,6 @@ namespace Minigine
 
 		void SpriteBatch::Draw(const Vector2F& position, const Vector2F& size, const Color& color)
 		{
-			// TODO: check for vector overflow.
 			BatchElement& element = this->elements[this->elementCount];
 
 			element.Position = position;
@@ -38,6 +37,11 @@ namespace Minigine
 			element.Color = color;
 
 			++this->elementCount;
+
+			if (this->elementCount >= this->elements.size())
+			{
+				this->elements.resize(this->elements.size() * 2);
+			}
 		}
 
 		void SpriteBatch::End() throw(...)
@@ -53,7 +57,7 @@ namespace Minigine
 				// TODO: check for window size.
 				glMatrixMode(GL_PROJECTION);
 				glLoadIdentity();
-				gluOrtho2D(0.0f, 800.0f, 600.0f, 0.0f);
+				gluOrtho2D(0.0f, this->graphicsDevice.GetScreenWidth(), this->graphicsDevice.GetScreenHeight(), 0.0f);
 
 				glMatrixMode(GL_MODELVIEW);
 				glLoadIdentity();
