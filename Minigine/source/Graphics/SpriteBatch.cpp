@@ -1,17 +1,17 @@
-#include <Windows.h>
-#include <GL/GL.h>
-#include <GL/GLU.h>
 #include "Graphics/SpriteBatch.hpp"
 
 namespace Minigine
 {
 	namespace Graphics
 	{
-		SpriteBatch::SpriteBatch()
+		SpriteBatch::SpriteBatch(const GraphicsDevice& parentDevice)
+			: graphicsDevice(parentDevice)
 		{
 			this->alreadyDrawing = false;
 			this->elements = vector<BatchElement>(512);
 			this->elementCount = 0;
+
+			this->graphicsDevice = parentDevice;
 		}
 
 		SpriteBatch::~SpriteBatch()

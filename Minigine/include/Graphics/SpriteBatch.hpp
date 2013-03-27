@@ -1,10 +1,11 @@
 #pragma once
 
-#include <../Minigine.hpp>
 #include <vector>
+#include "../Minigine.hpp"
 #include "Math/Vector2F.hpp"
 #include "Graphics/BatchElement.hpp"
 #include "Graphics/Color.hpp"
+#include "Graphics/GraphicsDevice.hpp"
 #include "InvalidOperationException.hpp"
 
 using std::vector;
@@ -17,12 +18,14 @@ namespace Minigine
 		class MINIGINE_API SpriteBatch
 		{
 		private:
+			GraphicsDevice graphicsDevice;
+
 			bool alreadyDrawing;
 			vector<BatchElement> elements;
 			int elementCount;
 
 		public:
-			SpriteBatch();
+			SpriteBatch(const GraphicsDevice& parentDevice);
 			~SpriteBatch();
 
 			void Begin() throw(...);
