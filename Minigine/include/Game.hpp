@@ -11,7 +11,7 @@ namespace Minigine
 {
 	class MINIGINE_API Game
 	{
-	private:
+	protected:
 		Window gameWindow;
 		GraphicsDevice graphicsDevice;
 
@@ -19,7 +19,7 @@ namespace Minigine
 		GraphicsDevice& GetGraphicsDevice() { return this->graphicsDevice; }
 
 	protected:
-		Game();
+		Game(const GraphicsDevice& device);
 
 	public:
 		void Run();

@@ -5,10 +5,10 @@ using sf::VideoMode;
 
 namespace Minigine
 {
-	Game::Game()
-		: graphicsDevice(800, 600, false)
+	Game::Game(const GraphicsDevice& device)
+		: graphicsDevice(device)
 	{
-		this->gameWindow.create(VideoMode(800, 600), std::string());
+		this->gameWindow.create(VideoMode(this->graphicsDevice.GetScreenWidth(), this->graphicsDevice.GetScreenHeight()), std::string());
 	}
 
 	void Game::Run()
