@@ -16,7 +16,7 @@ namespace Minigine
 		GraphicsDevice graphicsDevice;
 
 	public:
-		GraphicsDevice& GetGraphicsDevice() { return this->graphicsDevice; }
+		const GraphicsDevice& GetGraphicsDevice() const { return this->graphicsDevice; }
 
 	protected:
 		Game(const GraphicsDevice& device);
