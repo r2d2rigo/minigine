@@ -5,8 +5,11 @@ namespace Minigine
 {
 	namespace Graphics
 	{
+		// TODO: support for different GL versions
 		GraphicsDevice::GraphicsDevice(int screenWidth, int screenHeight, bool fullScreen)
 		{
+			glewInit();
+
 			this->screenWidth = screenWidth;
 			this->screenHeight = screenHeight;
 		}
