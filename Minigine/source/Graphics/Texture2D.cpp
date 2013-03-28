@@ -7,8 +7,8 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		Texture2D::Texture2D(const GraphicsDevice& graphicsDevice, int textureWidth, int textureHeight)
-			: parentDevice(graphicsDevice), width(textureWidth), height(textureHeight)
+		Texture2D::Texture2D(const GraphicsDevice& graphicsDevice, int textureWidth, int textureHeight, TextureFormat textureFormat)
+			: parentDevice(graphicsDevice), width(textureWidth), height(textureHeight), format(textureFormat)
 		{
 			glGenTextures(1, &this->handle);
 		}
@@ -20,6 +20,13 @@ namespace Minigine
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, this->width, this->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+		}
+
+		Texture2D& Texture2D::FromFile(const GraphicsDevice& graphicsDevice, string filename)
+		{
+			Texture2D newTexture(graphicsDevice, 1, 1);
+
+			return newTexture;
 		}
 	}
 }

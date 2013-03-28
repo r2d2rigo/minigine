@@ -85,6 +85,7 @@
     <ClInclude Include="include\Graphics\IndexBuffer.hpp" />
     <ClInclude Include="include\Graphics\SpriteBatch.hpp" />
     <ClInclude Include="include\Graphics\Texture2D.hpp" />
+    <ClInclude Include="include\Graphics\TextureFormat.hpp" />
     <ClInclude Include="include\Graphics\VertexBuffer.hpp" />
     <ClInclude Include="include\InvalidOperationException.hpp" />
     <ClInclude Include="include\Math\Vector2F.hpp" />
