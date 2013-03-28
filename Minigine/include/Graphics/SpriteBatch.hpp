@@ -7,7 +7,6 @@
 #include "Graphics/Color.hpp"
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/Texture2D.hpp"
-#include "InvalidOperationException.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;

@@ -1,4 +1,5 @@
 #include "Graphics/SpriteBatch.hpp"
+#include "InvalidOperationException.hpp"
 
 namespace Minigine
 {

@@ -29,7 +29,7 @@ namespace Minigine
 
 		public:
 			Texture2D(const GraphicsDevice& graphicsDevice, int textureWidth, int textureHeight, TextureFormat textureFormat = TextureFormat::RGBA32);
-			void SetData(const byte data[]);
+			void SetData(const byte data[]) throw(...);
 
 			static Texture2D& FromFile(const GraphicsDevice& graphicsDevice, string filename);
 		};

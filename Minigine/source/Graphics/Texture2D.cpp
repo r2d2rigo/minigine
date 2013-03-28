@@ -1,5 +1,6 @@
 #include <../Minigine.hpp>
 #include "Graphics\Texture2D.hpp"
+#include "InvalidOperationException.hpp"
 #include <Windows.h>
 #include <gl/GL.h>
 
@@ -13,8 +14,32 @@ namespace Minigine
 			glGenTextures(1, &this->handle);
 		}
 
-		void Texture2D::SetData(const byte data[])
+		void Texture2D::SetData(const byte data[]) throw(...)
 		{
+			// TODO: check for correct data size
+			//int requiredDataSize = this->width * this->height;
+
+			//switch (this->format)
+			//{
+			//	case TextureFormat::RGB24:
+			//		requiredDataSize *= 3;
+			//		break;
+			//	case TextureFormat::RGBA32:
+			//		requiredDataSize *= 4;
+			//		break;
+			//	case TextureFormat::DXT1:
+			//		requiredDataSize /= 8;
+			//		break;
+			//	case TextureFormat::DXT5:
+			//		requiredDataSize /= 4;
+			//		break;
+			//}
+
+			//if ((sizeof(data) / sizeof(data[0])) != requiredDataSize)
+			//{
+			//	throw InvalidOperationException("Data is too large or small for this texture.");
+			//}
+
 			glEnable(GL_TEXTURE_2D);
 			glBindTexture(GL_TEXTURE_2D, this->handle);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
