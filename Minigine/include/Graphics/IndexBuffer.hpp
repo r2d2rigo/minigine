@@ -1,24 +1,19 @@
 #pragma once
 
 #include <../Minigine.hpp>
+#include "Graphics/Buffer.hpp"
 
 namespace Minigine
 {
 	namespace Graphics
 	{
-		class MINIGINE_API IndexBuffer
+		class MINIGINE_API IndexBuffer : public Buffer
 		{
-		private:
-			unsigned int handle;
-			bool dynamic;
-
 		public:
-			const unsigned int& GetHandle() { return this->handle; }
-			const bool& IsDynamic() const { return this->dynamic; }
 			void SetData(int dataSize, void* data);
 
 		public:
-			IndexBuffer(const bool& isDynamic = false);
+			IndexBuffer(const GraphicsDevice& graphicsDevice, const bool& isDynamic = false);
 		};
 	}
 }

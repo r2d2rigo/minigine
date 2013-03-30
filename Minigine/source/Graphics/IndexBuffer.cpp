@@ -7,15 +7,18 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		IndexBuffer::IndexBuffer(const bool& isDynamic)
+		IndexBuffer::IndexBuffer(const GraphicsDevice& graphicsDevice, const bool& isDynamic)
+			: Buffer(graphicsDevice, isDynamic)
 		{
-			this->dynamic = isDynamic;
 			glGenBuffers(1, &this->handle);
 		}
 
 		void IndexBuffer::SetData(int dataSize, void* data)
 		{
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW);
+			GLenum bufferMode = this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW;
+
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->handle);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, GL_STATIC_DRAW);
 		}
 	}
 }

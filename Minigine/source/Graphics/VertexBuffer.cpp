@@ -7,9 +7,9 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		VertexBuffer::VertexBuffer(const bool& isDynamic)
+		VertexBuffer::VertexBuffer(const GraphicsDevice& graphicsDevice, const bool& isDynamic) 
+			: Buffer(graphicsDevice, isDynamic)
 		{
-			this->dynamic = isDynamic;
 			glGenBuffers(1, &this->handle);
 		}
 
@@ -17,7 +17,8 @@ namespace Minigine
 		{
 			GLenum bufferMode = this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW;
 
-			glBufferData(GL_ARRAY_BUFFER, dataSize, data, bufferMode);
+			glBindBuffer(GL_ARRAY_BUFFER, this->handle);
+			glBufferData(GL_ARRAY_BUFFER, dataSize, data, GL_STATIC_DRAW);
 		}
 	}
 }
