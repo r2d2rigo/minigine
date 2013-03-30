@@ -5,7 +5,7 @@ using namespace Minigine::Math;
 using namespace Minigine::Graphics;
 
 Minigame::Minigame()
-	: Game(GraphicsDevice(800, 600)), spriteBatch(graphicsDevice), texture(graphicsDevice, 16, 16)
+	: Game(GraphicsDevice(800, 600)), spriteBatch(graphicsDevice), texture(graphicsDevice, 16, 16), effect(Effect())
 {
 	byte data[4 * 16 * 16];
 
@@ -51,6 +51,9 @@ Minigame::Minigame()
 	}
 
 	this->texture.SetData(data);
+
+	//Minigine::Graphics::EffectTechnique technique("attribute vec3 position; void main() { gl_Position = vec4(position, 1.0); } ", "void main() { gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); } ");
+	//this->effect.AddTechnique("test", technique);
 }
 
 void Minigame::Update(float elapsedTime)
