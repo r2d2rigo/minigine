@@ -41,5 +41,37 @@ namespace Minigine
 		{
 			return !(*this == v);
 		}
+
+		Vector2F& Vector2F::operator+=(const Vector2F& other)
+		{
+			this->SetX(this->GetX() + other.GetX());
+			this->SetY(this->GetY() + other.GetY());
+
+			return *this;
+		}
+
+		Vector2F& Vector2F::operator-=(const Vector2F& other)
+		{
+			this->SetX(this->GetX() - other.GetX());
+			this->SetY(this->GetY() - other.GetY());
+
+			return *this;
+		}
+
+		Vector2F Vector2F::operator+(const Vector2F& other) const
+		{
+			Vector2F v = *this;
+			v += other;
+
+			return v;
+		}
+
+		Vector2F Vector2F::operator-(const Vector2F& other) const
+		{
+			Vector2F v = *this;
+			v -= other;
+
+			return v;
+		}
 	}
 }
