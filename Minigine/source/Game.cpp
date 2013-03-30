@@ -9,6 +9,19 @@ namespace Minigine
 		: graphicsDevice(device)
 	{
 		this->gameWindow.create(VideoMode(this->graphicsDevice.GetScreenWidth(), this->graphicsDevice.GetScreenHeight()), std::string());
+
+		// TODO: this should go in GraphicsDevice, but before we need a Window initialized!
+		GLenum result = glewInit();
+		if (result != GLEW_OK)
+		{
+			const GLubyte* error = glewGetErrorString(result);
+			int b = 0;
+		}
+
+		if (GLEW_VERSION_3_0)
+		{
+			int a = 0;
+		}
 	}
 
 	void Game::Run()
