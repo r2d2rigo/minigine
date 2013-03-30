@@ -1,5 +1,6 @@
 #include <Graphics/GraphicsDevice.hpp>
 #include <string.h>
+#include "Graphics/VertexPositionColor.hpp"
 
 namespace Minigine
 {
@@ -8,18 +9,18 @@ namespace Minigine
 		// TODO: support for different GL versions
 		GraphicsDevice::GraphicsDevice(int screenWidth, int screenHeight, bool fullScreen)
 		{
-			glewInit();
-
 			this->screenWidth = screenWidth;
 			this->screenHeight = screenHeight;
 		}
 
 		void GraphicsDevice::SetIndexBuffer(const IndexBuffer& indexBuffer)
 		{
+			this->indexBuffer = const_cast<IndexBuffer*>(&indexBuffer);
 		}
 
 		void GraphicsDevice::SetVertexBuffer(const VertexBuffer& vertexBuffer)
 		{
+			this->vertexBuffer = const_cast<VertexBuffer*>(&vertexBuffer);
 		}
 
 		void GraphicsDevice::Clear(const Color& clearColor)
@@ -37,6 +38,13 @@ namespace Minigine
 
 		void GraphicsDevice::Draw() const
 		{
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
+			glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
+
+			glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(VertexPositionColor), 0);
+			glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, false, sizeof(VertexPositionColor), (void*)(3*4));
+
+			glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
 		}
 	}
 }

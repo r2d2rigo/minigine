@@ -18,6 +18,9 @@ namespace Minigine
 			int screenWidth;
 			int screenHeight;
 
+			IndexBuffer* indexBuffer;
+			VertexBuffer* vertexBuffer;
+
 		public:
 			const int& GetScreenWidth() const { return this->screenWidth; }
 			const int& GetScreenHeight() const { return this->screenHeight; }
