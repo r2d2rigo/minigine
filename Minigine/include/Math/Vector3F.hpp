@@ -1,6 +1,7 @@
 #pragma once
 
 #include <../Minigine.hpp>
+#include "Math/Vector2F.hpp"
 
 namespace Minigine
 {
@@ -36,10 +37,15 @@ namespace Minigine
 		public:
 			Vector3F();
 			Vector3F(const float& x, const float& y, const float& z);
+			Vector3F(const Vector2F& v);
 			Vector3F& operator=(const Vector3F& source); 
 
 			bool operator==(const Vector3F& v) const;
 			bool operator!=(const Vector3F& v) const;
+			Vector3F& operator+=(const Vector3F& other);
+			Vector3F& operator-=(const Vector3F& other);
+			Vector3F operator+(const Vector3F& other) const;
+			Vector3F operator-(const Vector3F& other) const;
 		};
 	}
 }

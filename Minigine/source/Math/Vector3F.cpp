@@ -24,6 +24,13 @@ namespace Minigine
 			this->SetZ(z);
 		}
 
+		Vector3F::Vector3F(const Vector2F& v)
+		{
+			this->SetX(v.GetX());
+			this->SetY(v.GetY());
+			this->SetZ(0.0f);
+		}
+
 		Vector3F& Vector3F::operator=(const Vector3F& source)
 		{
 			if (this != &source)
@@ -44,6 +51,40 @@ namespace Minigine
 		bool Vector3F::operator!=(const Vector3F& v) const
 		{
 			return !(*this == v);
+		}
+
+		Vector3F& Vector3F::operator+=(const Vector3F& other)
+		{
+			this->SetX(this->GetX() + other.GetX());
+			this->SetY(this->GetY() + other.GetY());
+			this->SetZ(this->GetZ() + other.GetZ());
+
+			return *this;
+		}
+
+		Vector3F& Vector3F::operator-=(const Vector3F& other)
+		{
+			this->SetX(this->GetX() - other.GetX());
+			this->SetY(this->GetY() - other.GetY());
+			this->SetZ(this->GetZ() - other.GetZ());
+
+			return *this;
+		}
+
+		Vector3F Vector3F::operator+(const Vector3F& other) const
+		{
+			Vector3F v = *this;
+			v += other;
+
+			return v;
+		}
+
+		Vector3F Vector3F::operator-(const Vector3F& other) const
+		{
+			Vector3F v = *this;
+			v -= other;
+
+			return v;
 		}
 	}
 }
