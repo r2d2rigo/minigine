@@ -4,11 +4,11 @@ namespace Minigine
 {
 	namespace Math
 	{
-		const Vector3F Vector3F::One(1, 1, 1);
-		const Vector3F Vector3F::UnitX(1, 0, 0);
-		const Vector3F Vector3F::UnitY(0, 1, 0);
-		const Vector3F Vector3F::UnitZ(0, 0, 1);
-		const Vector3F Vector3F::Zero(0, 0, 0);
+		const Vector3F Vector3F::One = Vector3F(1, 1, 1);
+		const Vector3F Vector3F::UnitX = Vector3F(1, 0, 0);
+		const Vector3F Vector3F::UnitY = Vector3F(0, 1, 0);
+		const Vector3F Vector3F::UnitZ = Vector3F(0, 0, 1);
+		const Vector3F Vector3F::Zero = Vector3F(0, 0, 0);
 
 		Vector3F::Vector3F()
 		{
