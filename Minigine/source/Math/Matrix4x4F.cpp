@@ -44,11 +44,14 @@ namespace Minigine
 
 		Matrix4x4F& Matrix4x4F::operator=(const Matrix4x4F& matrix)
 		{
-			for (int i = 0; i < 4; ++i)
+			if (this != &matrix)
 			{
-				for (int j = 0; j < 4; ++j)
+				for (int i = 0; i < 4; ++i)
 				{
-					this->m[i][j] = matrix.m[i][j];
+					for (int j = 0; j < 4; ++j)
+					{
+						this->m[i][j] = matrix.m[i][j];
+					}
 				}
 			}
 
