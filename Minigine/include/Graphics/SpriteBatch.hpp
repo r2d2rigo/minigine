@@ -7,6 +7,7 @@
 #include "Graphics/Color.hpp"
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/Texture2D.hpp"
+#include "Graphics/EffectTechnique.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;
@@ -20,11 +21,13 @@ namespace Minigine
 		private:
 			static const int MaxBatchSize = 512;
 
-		private:
 			GraphicsDevice graphicsDevice;
-
+			VertexBuffer vertexBuffer;
+			IndexBuffer indexBuffer;
+			EffectTechnique* technique;
 			bool alreadyDrawing;
 			vector<BatchElement> elements;
+			vector<VertexPositionColor> vertices;
 			int elementCount;
 
 		public:

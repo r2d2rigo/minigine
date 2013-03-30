@@ -1,18 +1,22 @@
 #include "Graphics/SpriteBatch.hpp"
 #include "InvalidOperationException.hpp"
+#include "Graphics/VertexPositionColor.hpp"
 
 namespace Minigine
 {
 	namespace Graphics
 	{
 		SpriteBatch::SpriteBatch(const GraphicsDevice& parentDevice)
-			: graphicsDevice(parentDevice)
+			: graphicsDevice(parentDevice), vertexBuffer(parentDevice, true), indexBuffer(parentDevice, false)
 		{
 			this->alreadyDrawing = false;
 			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
+			this->vertices = vector<VertexPositionColor>(SpriteBatch::MaxBatchSize * 4);
 			this->elementCount = 0;
 
 			this->graphicsDevice = parentDevice;
+
+			this->technique = new Minigine::Graphics::EffectTechnique("layout (location=0) attribute vec3 position; layout (location=1) attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = mul(vec4(position, 1.0), world); outcol = color;} ", "varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
 		}
 
 		SpriteBatch::~SpriteBatch()
@@ -89,41 +93,34 @@ namespace Minigine
 
 			if (this->elementCount > 0)
 			{
-				// TODO: move to vertex buffers and shaders.
-				glMatrixMode(GL_PROJECTION);
-				glLoadIdentity();
-				gluOrtho2D(0.0f, this->graphicsDevice.GetScreenWidth(), this->graphicsDevice.GetScreenHeight(), 0.0f);
+				int indices[] =
+				{
+					0, 1, 2,
+					2, 3, 0,
+					4, 5, 6,
+					6, 7, 4,
+				};
 
-				glMatrixMode(GL_MODELVIEW);
-				glLoadIdentity();
- 
+				// TODO: don't clear. Overwrite members.
+				this->vertices.clear();
+
 				// TODO: use iterators
-				for (int i = 0; i < this->elementCount; ++i)
+				for (int i = 0; i < 2; ++i)
 				{
 					BatchElement& currentElement = this->elements[i];
 
-					if (currentElement.Texture != NULL)
-					{
-						glEnable(GL_TEXTURE_2D);
-						glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
-					}
-					else
-					{
-						glDisable(GL_TEXTURE_2D);
-					}
-
-					glColor4ubv(currentElement.Color.GetVector());
-					glBegin(GL_QUADS);
-					glVertex2f(currentElement.Position.GetX(), currentElement.Position.GetY());
-					glTexCoord2f(0.0f, 0.0f);
-					glVertex2f(currentElement.Position.GetX() + currentElement.Size.GetX(), currentElement.Position.GetY());
-					glTexCoord2f(1.0f, 0.0f);
-					glVertex2f(currentElement.Position.GetX() + currentElement.Size.GetX(), currentElement.Position.GetY() + currentElement.Size.GetY());
-					glTexCoord2f(1.0f, 1.0f);
-					glVertex2f(currentElement.Position.GetX(), currentElement.Position.GetY() + currentElement.Size.GetY());
-					glTexCoord2f(0.0f, 1.0f);
-					glEnd();
+					vertices.push_back(VertexPositionColor(currentElement.Position, currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + Vector2F(currentElement.Size.GetX(), 0), currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + currentElement.Size, currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + Vector2F(0, currentElement.Size.GetY()), currentElement.Color));
 				}
+
+				this->technique->Apply();
+				this->vertexBuffer.SetData(sizeof(VertexPositionColor) * vertices.size(), &vertices[0]);
+				this->indexBuffer.SetData(sizeof(int) * 12, &indices[0]);
+				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
+				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer	);
+				this->graphicsDevice.Draw();
 
 				this->elementCount = 0;
 			}
