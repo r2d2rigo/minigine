@@ -1,7 +1,5 @@
 #include <Graphics/VertexBuffer.hpp>
-#include <Windows.h>
-#include <gl/glew.h>
-#include <gl/GL.h>
+#include "GLConfig.hpp"
 
 namespace Minigine
 {
@@ -18,7 +16,7 @@ namespace Minigine
 			GLenum bufferMode = this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW;
 
 			glBindBuffer(GL_ARRAY_BUFFER, this->handle);
-			glBufferData(GL_ARRAY_BUFFER, dataSize, data, GL_STATIC_DRAW);
+			glBufferData(GL_ARRAY_BUFFER, dataSize, data, bufferMode);
 		}
 	}
 }
