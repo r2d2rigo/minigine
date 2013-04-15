@@ -1,8 +1,6 @@
 #include <Graphics/IndexBuffer.hpp>
-#include <Windows.h>
-#include <gl/glew.h>
-#include <gl/GL.h>
-
+#include "GLConfig.hpp"
+	
 namespace Minigine
 {
 	namespace Graphics
@@ -18,7 +16,7 @@ namespace Minigine
 			GLenum bufferMode = this->IsDynamic() ? GL_DYNAMIC_DRAW : GL_STATIC_DRAW;
 
 			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->handle);
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, GL_STATIC_DRAW);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, dataSize, data, bufferMode);
 		}
 	}
 }

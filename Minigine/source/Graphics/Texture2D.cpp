@@ -1,8 +1,7 @@
 #include <../Minigine.hpp>
-#include "Graphics\Texture2D.hpp"
+#include "Graphics/Texture2D.hpp"
 #include "InvalidOperationException.hpp"
-#include <Windows.h>
-#include <gl/GL.h>
+#include "GLConfig.hpp"
 
 namespace Minigine
 {

@@ -1,7 +1,5 @@
 #include "Graphics/EffectTechnique.hpp"
-#include <Windows.h>
-#include <GL/glew.h>
-#include <gl/GL.h>
+#include "GLConfig.hpp"
 
 #include "Math/Matrix4x4F.hpp"
 
