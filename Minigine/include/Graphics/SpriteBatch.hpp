@@ -8,6 +8,7 @@
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/Texture2D.hpp"
 #include "Graphics/EffectTechnique.hpp"
+#include "Graphics/VertexPositionColor.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;
