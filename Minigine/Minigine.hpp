@@ -18,6 +18,7 @@
 
 #if IOS
     #define MINIGINE_API
+    #define MINIGINE_EXPIMP
 #endif
 
 typedef unsigned char byte;
