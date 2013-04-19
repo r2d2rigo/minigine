@@ -1,7 +1,7 @@
 #pragma once
 
 #include <../Minigine.hpp>
-#include "GLConfig.hpp"
+#include <../GLConfig.hpp>
 #include "Color.hpp"
 #include "IndexBuffer.hpp"
 #include "VertexBuffer.hpp"
