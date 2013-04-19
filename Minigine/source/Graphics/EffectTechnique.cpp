@@ -2,9 +2,10 @@
 #include "GLConfig.hpp"
 
 #include "Math/Matrix4x4F.hpp"
+#include <iostream>
 
 using std::endl;
-using std::cerr;
+using std::cout;
 
 namespace Minigine
 {
@@ -22,7 +23,7 @@ namespace Minigine
 
 			int logLength = 0;
 			glGetShaderInfoLog(this->vertexShaderHandle, 512, &logLength, &shaderInfoLog[0]);
-			cerr << "Vertex shader log: " << shaderInfoLog << endl;
+			cout << "Vertex shader log: " << shaderInfoLog << endl;
 
 			this->fragmentShaderHandle = glCreateShader(GL_FRAGMENT_SHADER);
 
@@ -30,7 +31,7 @@ namespace Minigine
 			glShaderSource(this->fragmentShaderHandle, 1, &fragmentSource, NULL);
 			glCompileShader(this->fragmentShaderHandle);
 			glGetShaderInfoLog(this->fragmentShaderHandle, 512, &logLength, &shaderInfoLog[0]);
-			cerr << "Fragment shader log: " << shaderInfoLog << endl;
+			cout << "Fragment shader log: " << shaderInfoLog << endl;
 
 			this->programHandle = glCreateProgram();
 			glAttachShader(this->programHandle, this->vertexShaderHandle);
@@ -38,7 +39,7 @@ namespace Minigine
 			glLinkProgram(this->programHandle);
 
 			glGetProgramInfoLog(this->programHandle, 512, &logLength, &shaderInfoLog[0]);
-			cerr << "Shader program log: " << shaderInfoLog << endl;
+			cout << "Shader program log: " << shaderInfoLog << endl;
 		}
 
 		void EffectTechnique::Apply()

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <../Minigine.hpp>
+#include <string>
 
 using std::string;
 
