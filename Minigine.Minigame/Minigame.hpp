@@ -13,13 +13,13 @@ using Minigine::Graphics::Effect;
 class Minigame : public Game
 {
 private:
-	SpriteBatch spriteBatch;
-	Texture2D texture;
-	Effect& effect;
+	SpriteBatch* spriteBatch;
+	Texture2D* texture;
 
 public:
 	Minigame();
 
+    void Initialize();
 	void Update(float elapsedTime);
 	void Draw(float elapsedTime);
 };
