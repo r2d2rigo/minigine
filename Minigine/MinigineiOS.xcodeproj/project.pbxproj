@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */; };
+		5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FED171E13CD001BBD19 /* GLViewController.mm */; };
+		5B560FF1171E19F4001BBD19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B560FEF171E198E001BBD19 /* QuartzCore.framework */; };
+		5BD7B53A171CC12000960CAD /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7B538171CC12000960CAD /* GLView.mm */; };
+		5BD7B53E171CC5A400960CAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B53D171CC5A400960CAD /* OpenGLES.framework */; };
+		5BEBBF3C171B3D7000040379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEBBF3B171B3D7000040379 /* Foundation.framework */; };
+		5BEBBF76171B3F3800040379 /* Minigine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF64171B3F3800040379 /* Minigine.cpp */; };
+		5BEBBF77171B3F3800040379 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF66171B3F3800040379 /* Game.cpp */; };
+		5BEBBF78171B3F3800040379 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF68171B3F3800040379 /* Color.cpp */; };
+		5BEBBF79171B3F3800040379 /* Effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF69171B3F3800040379 /* Effect.cpp */; };
+		5BEBBF7A171B3F3800040379 /* EffectTechnique.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6A171B3F3800040379 /* EffectTechnique.cpp */; };
+		5BEBBF7B171B3F3800040379 /* GraphicsDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6B171B3F3800040379 /* GraphicsDevice.cpp */; };
+		5BEBBF7C171B3F3800040379 /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6C171B3F3800040379 /* IndexBuffer.cpp */; };
+		5BEBBF7D171B3F3800040379 /* SpriteBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */; };
+		5BEBBF7E171B3F3800040379 /* Texture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6E171B3F3800040379 /* Texture2D.cpp */; };
+		5BEBBF7F171B3F3800040379 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */; };
+		5BEBBF80171B3F3800040379 /* VertexPositionColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */; };
+		5BEBBF81171B3F3800040379 /* InvalidOperationException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */; };
+		5BEBBF82171B3F3800040379 /* Matrix4x4F.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */; };
+		5BEBBF83171B3F3800040379 /* Vector2F.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF74171B3F3800040379 /* Vector2F.cpp */; };
+		5BEBBF84171B3F3800040379 /* Vector3F.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF75171B3F3800040379 /* Vector3F.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BEBBF36171B3D7000040379 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = SOURCE_ROOT; };
+		5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		5B560FEC171E13A6001BBD19 /* GLViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLViewController.hpp; sourceTree = SOURCE_ROOT; };
+		5B560FED171E13CD001BBD19 /* GLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLViewController.mm; sourceTree = SOURCE_ROOT; };
+		5B560FEF171E198E001BBD19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5BD7B537171CC10700960CAD /* GLView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLView.hpp; sourceTree = SOURCE_ROOT; };
+		5BD7B538171CC12000960CAD /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = SOURCE_ROOT; };
+		5BD7B53D171CC5A400960CAD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5BEBBF38171B3D7000040379 /* libMinigineiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMinigineiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BEBBF3B171B3D7000040379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BEBBF3F171B3D7000040379 /* MinigineiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MinigineiOS-Prefix.pch"; sourceTree = "<group>"; };
+		5BEBBF4F171B3EF900040379 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Game.hpp; path = include/Game.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF51171B3EF900040379 /* BatchElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BatchElement.hpp; sourceTree = "<group>"; };
+		5BEBBF52171B3EF900040379 /* Buffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Buffer.hpp; sourceTree = "<group>"; };
+		5BEBBF53171B3EF900040379 /* Color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
+		5BEBBF54171B3EF900040379 /* Effect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Effect.hpp; sourceTree = "<group>"; };
+		5BEBBF55171B3EF900040379 /* EffectTechnique.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EffectTechnique.hpp; sourceTree = "<group>"; };
+		5BEBBF56171B3EF900040379 /* GraphicsDevice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GraphicsDevice.hpp; sourceTree = "<group>"; };
+		5BEBBF57171B3EF900040379 /* IndexBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IndexBuffer.hpp; sourceTree = "<group>"; };
+		5BEBBF58171B3EF900040379 /* SpriteBatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteBatch.hpp; sourceTree = "<group>"; };
+		5BEBBF59171B3EF900040379 /* Texture2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture2D.hpp; sourceTree = "<group>"; };
+		5BEBBF5A171B3EF900040379 /* TextureFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureFormat.hpp; sourceTree = "<group>"; };
+		5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexBuffer.hpp; sourceTree = "<group>"; };
+		5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColor.hpp; sourceTree = "<group>"; };
+		5BEBBF5D171B3EF900040379 /* InvalidOperationException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = InvalidOperationException.hpp; path = include/InvalidOperationException.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF5F171B3EF900040379 /* Matrix4x4F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix4x4F.hpp; sourceTree = "<group>"; };
+		5BEBBF60171B3EF900040379 /* Vector2F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2F.hpp; sourceTree = "<group>"; };
+		5BEBBF61171B3EF900040379 /* Vector3F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector3F.hpp; sourceTree = "<group>"; };
+		5BEBBF62171B3F1B00040379 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF63171B3F1B00040379 /* Minigine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Minigine.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF64171B3F3800040379 /* Minigine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Minigine.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF66171B3F3800040379 /* Game.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Game.cpp; path = source/Game.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF68171B3F3800040379 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Color.cpp; path = source/Graphics/Color.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF69171B3F3800040379 /* Effect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Effect.cpp; path = source/Graphics/Effect.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6A171B3F3800040379 /* EffectTechnique.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EffectTechnique.cpp; path = source/Graphics/EffectTechnique.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6B171B3F3800040379 /* GraphicsDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsDevice.cpp; path = source/Graphics/GraphicsDevice.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6C171B3F3800040379 /* IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexBuffer.cpp; path = source/Graphics/IndexBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteBatch.cpp; path = source/Graphics/SpriteBatch.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6E171B3F3800040379 /* Texture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture2D.cpp; path = source/Graphics/Texture2D.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexBuffer.cpp; path = source/Graphics/VertexBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColor.cpp; path = source/Graphics/VertexPositionColor.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidOperationException.cpp; path = source/InvalidOperationException.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix4x4F.cpp; path = source/Math/Matrix4x4F.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF74171B3F3800040379 /* Vector2F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2F.cpp; path = source/Math/Vector2F.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF75171B3F3800040379 /* Vector3F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector3F.cpp; path = source/Math/Vector3F.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF85171B414F00040379 /* GLConfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLConfig.hpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BEBBF35171B3D7000040379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BEBBF3C171B3D7000040379 /* Foundation.framework in Frameworks */,
+				5BD7B53E171CC5A400960CAD /* OpenGLES.framework in Frameworks */,
+				5B560FF1171E19F4001BBD19 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BEBBF2D171B3D7000040379 = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF3D171B3D7000040379 /* MinigineiOS */,
+				5BEBBF3A171B3D7000040379 /* Frameworks */,
+				5BEBBF39171B3D7000040379 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BEBBF39171B3D7000040379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF38171B3D7000040379 /* libMinigineiOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BEBBF3A171B3D7000040379 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B560FEF171E198E001BBD19 /* QuartzCore.framework */,
+				5BEBBF3B171B3D7000040379 /* Foundation.framework */,
+				5BD7B53D171CC5A400960CAD /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BEBBF3D171B3D7000040379 /* MinigineiOS */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF49171B3E3C00040379 /* Include */,
+				5BEBBF4A171B3E4800040379 /* Source */,
+				5BEBBF3E171B3D7000040379 /* Supporting Files */,
+			);
+			path = MinigineiOS;
+			sourceTree = "<group>";
+		};
+		5BEBBF3E171B3D7000040379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF3F171B3D7000040379 /* MinigineiOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BEBBF49171B3E3C00040379 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF62171B3F1B00040379 /* Math.hpp */,
+				5BEBBF63171B3F1B00040379 /* Minigine.hpp */,
+				5BEBBF4F171B3EF900040379 /* Game.hpp */,
+				5BEBBF50171B3EF900040379 /* Graphics */,
+				5BEBBF5D171B3EF900040379 /* InvalidOperationException.hpp */,
+				5BEBBF5E171B3EF900040379 /* Math */,
+				5BEBBF85171B414F00040379 /* GLConfig.hpp */,
+				5BD7B537171CC10700960CAD /* GLView.hpp */,
+				5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */,
+				5B560FEC171E13A6001BBD19 /* GLViewController.hpp */,
+			);
+			name = Include;
+			sourceTree = "<group>";
+		};
+		5BEBBF4A171B3E4800040379 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF66171B3F3800040379 /* Game.cpp */,
+				5BEBBF67171B3F3800040379 /* Graphics */,
+				5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */,
+				5BEBBF72171B3F3800040379 /* Math */,
+				5BEBBF64171B3F3800040379 /* Minigine.cpp */,
+				5BD7B538171CC12000960CAD /* GLView.mm */,
+				5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */,
+				5B560FED171E13CD001BBD19 /* GLViewController.mm */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		5BEBBF50171B3EF900040379 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF51171B3EF900040379 /* BatchElement.hpp */,
+				5BEBBF52171B3EF900040379 /* Buffer.hpp */,
+				5BEBBF53171B3EF900040379 /* Color.hpp */,
+				5BEBBF54171B3EF900040379 /* Effect.hpp */,
+				5BEBBF55171B3EF900040379 /* EffectTechnique.hpp */,
+				5BEBBF56171B3EF900040379 /* GraphicsDevice.hpp */,
+				5BEBBF57171B3EF900040379 /* IndexBuffer.hpp */,
+				5BEBBF58171B3EF900040379 /* SpriteBatch.hpp */,
+				5BEBBF59171B3EF900040379 /* Texture2D.hpp */,
+				5BEBBF5A171B3EF900040379 /* TextureFormat.hpp */,
+				5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */,
+				5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */,
+			);
+			name = Graphics;
+			path = include/Graphics;
+			sourceTree = SOURCE_ROOT;
+		};
+		5BEBBF5E171B3EF900040379 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF5F171B3EF900040379 /* Matrix4x4F.hpp */,
+				5BEBBF60171B3EF900040379 /* Vector2F.hpp */,
+				5BEBBF61171B3EF900040379 /* Vector3F.hpp */,
+			);
+			name = Math;
+			path = include/Math;
+			sourceTree = SOURCE_ROOT;
+		};
+		5BEBBF67171B3F3800040379 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF68171B3F3800040379 /* Color.cpp */,
+				5BEBBF69171B3F3800040379 /* Effect.cpp */,
+				5BEBBF6A171B3F3800040379 /* EffectTechnique.cpp */,
+				5BEBBF6B171B3F3800040379 /* GraphicsDevice.cpp */,
+				5BEBBF6C171B3F3800040379 /* IndexBuffer.cpp */,
+				5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */,
+				5BEBBF6E171B3F3800040379 /* Texture2D.cpp */,
+				5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */,
+				5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */,
+			);
+			name = Graphics;
+			path = ../source/Graphics;
+			sourceTree = "<group>";
+		};
+		5BEBBF72171B3F3800040379 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */,
+				5BEBBF74171B3F3800040379 /* Vector2F.cpp */,
+				5BEBBF75171B3F3800040379 /* Vector3F.cpp */,
+			);
+			name = Math;
+			path = ../source/Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BEBBF37171B3D7000040379 /* MinigineiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BEBBF46171B3D7000040379 /* Build configuration list for PBXNativeTarget "MinigineiOS" */;
+			buildPhases = (
+				5BEBBF34171B3D7000040379 /* Sources */,
+				5BEBBF35171B3D7000040379 /* Frameworks */,
+				5BEBBF36171B3D7000040379 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MinigineiOS;
+			productName = MinigineiOS;
+			productReference = 5BEBBF38171B3D7000040379 /* libMinigineiOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BEBBF2F171B3D7000040379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = r2d2rigo;
+			};
+			buildConfigurationList = 5BEBBF32171B3D7000040379 /* Build configuration list for PBXProject "MinigineiOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BEBBF2D171B3D7000040379;
+			productRefGroup = 5BEBBF39171B3D7000040379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BEBBF37171B3D7000040379 /* MinigineiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BEBBF34171B3D7000040379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BEBBF76171B3F3800040379 /* Minigine.cpp in Sources */,
+				5BEBBF77171B3F3800040379 /* Game.cpp in Sources */,
+				5BEBBF78171B3F3800040379 /* Color.cpp in Sources */,
+				5BEBBF79171B3F3800040379 /* Effect.cpp in Sources */,
+				5BEBBF7A171B3F3800040379 /* EffectTechnique.cpp in Sources */,
+				5BEBBF7B171B3F3800040379 /* GraphicsDevice.cpp in Sources */,
+				5BEBBF7C171B3F3800040379 /* IndexBuffer.cpp in Sources */,
+				5BEBBF7D171B3F3800040379 /* SpriteBatch.cpp in Sources */,
+				5BEBBF7E171B3F3800040379 /* Texture2D.cpp in Sources */,
+				5BEBBF7F171B3F3800040379 /* VertexBuffer.cpp in Sources */,
+				5BEBBF80171B3F3800040379 /* VertexPositionColor.cpp in Sources */,
+				5BEBBF81171B3F3800040379 /* InvalidOperationException.cpp in Sources */,
+				5BEBBF82171B3F3800040379 /* Matrix4x4F.cpp in Sources */,
+				5BEBBF83171B3F3800040379 /* Vector2F.cpp in Sources */,
+				5BEBBF84171B3F3800040379 /* Vector3F.cpp in Sources */,
+				5BD7B53A171CC12000960CAD /* GLView.mm in Sources */,
+				5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */,
+				5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5BEBBF44171B3D7000040379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = include;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		5BEBBF45171B3D7000040379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = include;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BEBBF47171B3D7000040379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/MinigineiOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MinigineiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					IOS,
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"include/**",
+					"../include/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5BEBBF48171B3D7000040379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
+				DSTROOT = /tmp/MinigineiOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MinigineiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = IOS;
+				HEADER_SEARCH_PATHS = (
+					"include/**",
+					"../include/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BEBBF32171B3D7000040379 /* Build configuration list for PBXProject "MinigineiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BEBBF44171B3D7000040379 /* Debug */,
+				5BEBBF45171B3D7000040379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BEBBF46171B3D7000040379 /* Build configuration list for PBXNativeTarget "MinigineiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BEBBF47171B3D7000040379 /* Debug */,
+				5BEBBF48171B3D7000040379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BEBBF2F171B3D7000040379 /* Project object */;
+}

@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B0E5C4A171F64B00096BA44 /* libMinigineiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0E5C49171F64B00096BA44 /* libMinigineiOS.a */; };
+		5B560FE3171E09C6001BBD19 /* Minigame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FE1171E09C6001BBD19 /* Minigame.cpp */; };
+		5B560FF3171E1A55001BBD19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B560FF2171E1A55001BBD19 /* QuartzCore.framework */; };
+		5BD7B553171CCC4B00960CAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B552171CCC4B00960CAD /* UIKit.framework */; };
+		5BD7B555171CCC4B00960CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B554171CCC4B00960CAD /* Foundation.framework */; };
+		5BD7B557171CCC4B00960CAD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B556171CCC4B00960CAD /* CoreGraphics.framework */; };
+		5BD7B55B171CCC4B00960CAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B55A171CCC4B00960CAD /* OpenGLES.framework */; };
+		5BD7B561171CCC4B00960CAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BD7B55F171CCC4B00960CAD /* InfoPlist.strings */; };
+		5BD7B563171CCC4B00960CAD /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7B562171CCC4B00960CAD /* main.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B0E5C49171F64B00096BA44 /* libMinigineiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMinigineiOS.a; path = "../../Library/Developer/Xcode/DerivedData/MinigineiOS-bbezwdhkclybwqgrkrcudcakfewy/Build/Products/Debug-iphoneos/libMinigineiOS.a"; sourceTree = "<group>"; };
+		5B560FE1171E09C6001BBD19 /* Minigame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Minigame.cpp; sourceTree = SOURCE_ROOT; };
+		5B560FE2171E09C6001BBD19 /* Minigame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Minigame.hpp; sourceTree = SOURCE_ROOT; };
+		5B560FF2171E1A55001BBD19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5BD7B54E171CCC4B00960CAD /* Minigine.Minigame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigine.Minigame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD7B552171CCC4B00960CAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BD7B554171CCC4B00960CAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BD7B556171CCC4B00960CAD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BD7B55A171CCC4B00960CAD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5BD7B55E171CCC4B00960CAD /* Minigine.Minigame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Minigine.Minigame-Info.plist"; sourceTree = "<group>"; };
+		5BD7B560171CCC4B00960CAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BD7B562171CCC4B00960CAD /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		5BD7B564171CCC4B00960CAD /* Minigine.Minigame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Minigine.Minigame-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BD7B54B171CCC4B00960CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B0E5C4A171F64B00096BA44 /* libMinigineiOS.a in Frameworks */,
+				5B560FF3171E1A55001BBD19 /* QuartzCore.framework in Frameworks */,
+				5BD7B553171CCC4B00960CAD /* UIKit.framework in Frameworks */,
+				5BD7B555171CCC4B00960CAD /* Foundation.framework in Frameworks */,
+				5BD7B557171CCC4B00960CAD /* CoreGraphics.framework in Frameworks */,
+				5BD7B55B171CCC4B00960CAD /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BD7B543171CCC4B00960CAD = {
+			isa = PBXGroup;
+			children = (
+				5B0E5C49171F64B00096BA44 /* libMinigineiOS.a */,
+				5BD7B55C171CCC4B00960CAD /* Minigine.Minigame */,
+				5BD7B551171CCC4B00960CAD /* Frameworks */,
+				5BD7B54F171CCC4B00960CAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BD7B54F171CCC4B00960CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BD7B54E171CCC4B00960CAD /* Minigine.Minigame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BD7B551171CCC4B00960CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B560FF2171E1A55001BBD19 /* QuartzCore.framework */,
+				5BD7B552171CCC4B00960CAD /* UIKit.framework */,
+				5BD7B554171CCC4B00960CAD /* Foundation.framework */,
+				5BD7B556171CCC4B00960CAD /* CoreGraphics.framework */,
+				5BD7B55A171CCC4B00960CAD /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BD7B55C171CCC4B00960CAD /* Minigine.Minigame */ = {
+			isa = PBXGroup;
+			children = (
+				5B560FE1171E09C6001BBD19 /* Minigame.cpp */,
+				5B560FE2171E09C6001BBD19 /* Minigame.hpp */,
+				5BD7B55D171CCC4B00960CAD /* Supporting Files */,
+			);
+			path = Minigine.Minigame;
+			sourceTree = "<group>";
+		};
+		5BD7B55D171CCC4B00960CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BD7B55E171CCC4B00960CAD /* Minigine.Minigame-Info.plist */,
+				5BD7B55F171CCC4B00960CAD /* InfoPlist.strings */,
+				5BD7B562171CCC4B00960CAD /* main.mm */,
+				5BD7B564171CCC4B00960CAD /* Minigine.Minigame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BD7B54D171CCC4B00960CAD /* Minigine.Minigame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BD7B577171CCC4B00960CAD /* Build configuration list for PBXNativeTarget "Minigine.Minigame" */;
+			buildPhases = (
+				5BD7B54A171CCC4B00960CAD /* Sources */,
+				5BD7B54B171CCC4B00960CAD /* Frameworks */,
+				5BD7B54C171CCC4B00960CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Minigine.Minigame;
+			productName = Minigine.Minigame;
+			productReference = 5BD7B54E171CCC4B00960CAD /* Minigine.Minigame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BD7B545171CCC4B00960CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = r2d2rigo;
+			};
+			buildConfigurationList = 5BD7B548171CCC4B00960CAD /* Build configuration list for PBXProject "Minigine.Minigame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BD7B543171CCC4B00960CAD;
+			productRefGroup = 5BD7B54F171CCC4B00960CAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BD7B54D171CCC4B00960CAD /* Minigine.Minigame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BD7B54C171CCC4B00960CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD7B561171CCC4B00960CAD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BD7B54A171CCC4B00960CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD7B563171CCC4B00960CAD /* main.mm in Sources */,
+				5B560FE3171E09C6001BBD19 /* Minigame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BD7B55F171CCC4B00960CAD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BD7B560171CCC4B00960CAD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BD7B575171CCC4B00960CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../Minigine/include/**";
+			};
+			name = Debug;
+		};
+		5BD7B576171CCC4B00960CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../Minigine/include/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BD7B578171CCC4B00960CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Minigine.Minigame/Minigine.Minigame-Prefix.pch";
+				INFOPLIST_FILE = "Minigine.Minigame/Minigine.Minigame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/MinigineiOS-bbezwdhkclybwqgrkrcudcakfewy/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5BD7B579171CCC4B00960CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Minigine.Minigame/Minigine.Minigame-Prefix.pch";
+				INFOPLIST_FILE = "Minigine.Minigame/Minigine.Minigame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/MinigineiOS-bbezwdhkclybwqgrkrcudcakfewy/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BD7B548171CCC4B00960CAD /* Build configuration list for PBXProject "Minigine.Minigame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BD7B575171CCC4B00960CAD /* Debug */,
+				5BD7B576171CCC4B00960CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BD7B577171CCC4B00960CAD /* Build configuration list for PBXNativeTarget "Minigine.Minigame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BD7B578171CCC4B00960CAD /* Debug */,
+				5BD7B579171CCC4B00960CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BD7B545171CCC4B00960CAD /* Project object */;
+}
