@@ -15,8 +15,6 @@ namespace Minigine
 			this->elementCount = 0;
 
 			this->graphicsDevice = parentDevice;
-
-			this->technique = new Minigine::Graphics::EffectTechnique("layout (location=0) attribute vec3 position; layout (location=1) attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = mul(vec4(position, 1.0), world); outcol = color;} ", "varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
 		}
 
 		SpriteBatch::~SpriteBatch()
@@ -29,7 +27,15 @@ namespace Minigine
 			{
 				throw InvalidOperationException("End must be called before calling Begin again.");
 			}
+            
+            // TODO: this is being lazy loaded right now because we need a valid GL context and we don't have it in the constructor!
+            if (this->technique == NULL)
+            {
+//                this->technique = new Minigine::Graphics::EffectTechnique("layout (location=0) attribute vec3 position; layout (location=1) attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = mul(vec4(position, 1.0), world); outcol = color;} ", "varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
 
+                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec3 position; attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = vec4(position, 1.0) * world; outcol = color;} ", "varying mediump vec4 outcol; void main() { gl_FragColor = outcol; } ");
+            }
+            
 			this->alreadyDrawing = true;
 		}
 
@@ -105,7 +111,7 @@ namespace Minigine
 				this->vertices.clear();
 
 				// TODO: use iterators
-				for (int i = 0; i < 2; ++i)
+				for (int i = 0; i < this->elementCount; ++i)
 				{
 					BatchElement& currentElement = this->elements[i];
 
