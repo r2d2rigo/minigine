@@ -39,6 +39,7 @@ namespace Minigine
 			void Draw(const Vector2F& position, const Vector2F& size, const Color& color);
 			void Draw(const Texture2D& texture, const Vector2F& position, const Color& color);
 			void Draw(const Texture2D& texture, const Vector2F& position, const Vector2F& size, const Color& color);
+            void Draw(const Texture2D& texture, const Vector2F& position, const float& rotation, const Vector2F& size, const Color& color);
 			void End() throw(...);
 		};
 

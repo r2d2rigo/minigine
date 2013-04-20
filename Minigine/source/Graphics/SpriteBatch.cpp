@@ -1,3 +1,4 @@
+#include <math.h>
 #include "Graphics/SpriteBatch.hpp"
 #include "InvalidOperationException.hpp"
 #include "Graphics/VertexPositionColor.hpp"
@@ -46,7 +47,8 @@ namespace Minigine
 			element.Position = position;
 			element.Size = size;
 			element.Color = color;
-//			element.Texture = NULL;
+			element.Texture = NULL;
+            element.Rotation = 0.0f;
 
 			++this->elementCount;
 
@@ -81,6 +83,7 @@ namespace Minigine
 			element.Size = size;
 			element.Color = color;
 			element.Texture = const_cast<Texture2D*>(&texture);
+            element.Rotation = 0.0f;
 
 			++this->elementCount;
 
@@ -90,6 +93,27 @@ namespace Minigine
 			}
 		}
 
+		void SpriteBatch::Draw(const Texture2D& texture, const Vector2F& position, const float& rotation, const Vector2F& size, const Color& color)
+		{
+			BatchElement& element = this->elements[this->elementCount];
+            
+			element.Position = position;
+			element.Size = size;
+			element.Color = color;
+			element.Texture = const_cast<Texture2D*>(&texture);
+            element.Rotation = rotation;
+            
+			++this->elementCount;
+            
+            // TODO: is this really neccessary?
+            this->elements[elementCount] = element;
+            
+			if (this->elementCount >= this->elements.size())
+			{
+				this->elements.resize(this->elements.size() * 2);
+			}
+		}
+        
 		void SpriteBatch::End() throw(...)
 		{
 			if (!this->alreadyDrawing)
@@ -114,11 +138,17 @@ namespace Minigine
 				for (int i = 0; i < this->elementCount; ++i)
 				{
 					BatchElement& currentElement = this->elements[i];
+                    
+                    float angleSin = sin(currentElement.Rotation);
+                    float angleCos = cos(currentElement.Rotation);
+                    
+                    Vector2F horzIncrement = Vector2F(currentElement.Size.GetX() * -angleSin, currentElement.Size.GetY() * angleCos);
+                    Vector2F vertIncrement = Vector2F(currentElement.Size.GetX() * angleCos, currentElement.Size.GetY() * angleSin);
 
 					vertices.push_back(VertexPositionColor(currentElement.Position, currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + Vector2F(currentElement.Size.GetX(), 0), currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + currentElement.Size, currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + Vector2F(0, currentElement.Size.GetY()), currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + horzIncrement, currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color));
+					vertices.push_back(VertexPositionColor(currentElement.Position + vertIncrement, currentElement.Color));
 				}
 
 				this->technique->Apply();
