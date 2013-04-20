@@ -41,7 +41,7 @@ namespace Minigine
             Vector2F& operator*=(const float& f);
 			Vector2F operator+(const Vector2F& other) const;
 			Vector2F operator-(const Vector2F& other) const;
-            Vector2F operator*(const float& f); const;
+            Vector2F operator*(const float& f) const;
 		};
 	}
 }
