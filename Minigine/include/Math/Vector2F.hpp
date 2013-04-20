@@ -38,8 +38,10 @@ namespace Minigine
 			bool operator!=(const Vector2F& v) const;
 			Vector2F& operator+=(const Vector2F& other);
 			Vector2F& operator-=(const Vector2F& other);
+            Vector2F& operator*=(const float& f);
 			Vector2F operator+(const Vector2F& other) const;
 			Vector2F operator-(const Vector2F& other) const;
+            Vector2F operator*(const float& f); const;
 		};
 	}
 }

@@ -57,6 +57,14 @@ namespace Minigine
 
 			return *this;
 		}
+        
+        Vector2F& Vector2F::operator*=(const float& f)
+		{
+			this->SetX(this->GetX() * f);
+			this->SetY(this->GetY() * f);
+            
+			return *this;
+		}
 
 		Vector2F Vector2F::operator+(const Vector2F& other) const
 		{
@@ -71,6 +79,14 @@ namespace Minigine
 			Vector2F v = *this;
 			v -= other;
 
+			return v;
+		}
+        
+		Vector2F Vector2F::operator*(const float& f) const
+		{
+			Vector2F v = *this;
+			v *= f;
+            
 			return v;
 		}
 	}
