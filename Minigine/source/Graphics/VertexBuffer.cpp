@@ -1,5 +1,5 @@
 #include <Graphics/VertexBuffer.hpp>
-#include "GLConfig.hpp"
+#include "../GLConfig.hpp"
 
 namespace Minigine
 {
