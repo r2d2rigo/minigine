@@ -11,17 +11,18 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		class BatchElement
+		struct BatchElement
 		{
 		public:
 			Vector2F Position;
 			Vector2F Size;
 			Color Color;
 			Texture2D* Texture;
+            float Rotation;
 
 		public:
 			BatchElement()
-				: Position(Vector2F::Zero), Size(Vector2F::Zero), Color(Color::White), Texture(NULL)
+                : Position(Vector2F::Zero), Size(Vector2F::Zero), Color(Color::White), Texture(NULL), Rotation(0)
 			{
 			};
 		};
