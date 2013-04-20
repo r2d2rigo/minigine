@@ -14,6 +14,7 @@ namespace Minigine
 			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
 			this->vertices = vector<VertexPositionColor>(SpriteBatch::MaxBatchSize * 4);
 			this->elementCount = 0;
+			this->technique = NULL;
 
 			this->graphicsDevice = parentDevice;
 		}
