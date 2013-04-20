@@ -17,8 +17,12 @@
 {
     [super loadView];
 
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    self.view = [[GLView alloc] initWithFrame:frame];
+    self.view = [[GLView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
+
+-(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
 }
 
 @end
