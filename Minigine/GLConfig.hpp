@@ -1,6 +1,6 @@
 #pragma once
 
-#if WINDOWS
+#if _WINDOWS
 #include <gl/glew.h>
 #include <Windows.h>
 #include <gl/GL.h>
