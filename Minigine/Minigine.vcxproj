@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="GLConfig.hpp" />
     <ClInclude Include="include\Game.hpp" />
     <ClInclude Include="include\Graphics\BatchElement.hpp" />
     <ClInclude Include="include\Graphics\Buffer.hpp" />
