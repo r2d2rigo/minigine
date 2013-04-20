@@ -1,11 +1,13 @@
 #include <Game.hpp>
 
-#if WINDOWS
+#if _WINDOWS
 using sf::Event;
 using sf::VideoMode;
 
 namespace Minigine
 {
+	Game* Game::runningInstance = NULL;
+
 	Game::Game(const GraphicsDevice& device)
 		: graphicsDevice(device)
 	{
@@ -29,6 +31,8 @@ namespace Minigine
 
 	void Game::Run()
 	{
+		this->Initialize();
+
 		while (this->gameWindow.isOpen())
 		{
 			Event inputEvent;
