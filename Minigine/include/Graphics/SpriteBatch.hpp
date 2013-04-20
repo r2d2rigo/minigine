@@ -43,7 +43,7 @@ namespace Minigine
 			void End() throw(...);
 		};
 
-#if WINDOWS
+#if _WINDOWS
 		MINIGINE_EXPIMP template class MINIGINE_API vector<BatchElement>;
 #endif
 	}

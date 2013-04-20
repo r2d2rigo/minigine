@@ -1,5 +1,5 @@
+#include <../GLConfig.hpp>
 #include "Graphics/EffectTechnique.hpp"
-#include "GLConfig.hpp"
 
 #include "Math/Matrix4x4F.hpp"
 #include <iostream>
