@@ -2,7 +2,7 @@
 // disable warnings on extern before template instantiation
 #pragma warning (disable : 4231)
 
-#if WINDOWS
+#if _WINDOWS
     #ifdef MINIGINE_EXPORTS
         #define MINIGINE_API __declspec(dllexport)
         #define MINIGINE_EXPIMP
