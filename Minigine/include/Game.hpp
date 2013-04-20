@@ -1,6 +1,6 @@
 #pragma once
 
-#if WINDOWS
+#if _WINDOWS
 #include <SFML/Window.hpp>
 using sf::Window;
 #endif
@@ -15,7 +15,7 @@ namespace Minigine
 	class MINIGINE_API Game
 	{
 	protected:
-#if WINDOWS
+#if _WINDOWS
 		Window gameWindow;
 #else
         
