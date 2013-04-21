@@ -11,4 +11,13 @@
 #include <OpenGLES/ES2/glext.h>
 
 #define glClearDepth glClearDepthf
+
+inline void CheckGLError()
+{
+    GLenum err = glGetError();
+    if (err != GL_NO_ERROR)
+    {
+        throw ("GL error");
+    }
+}
 #endif
