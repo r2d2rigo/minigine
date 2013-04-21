@@ -32,10 +32,14 @@ namespace Minigine
 			glCompileShader(this->fragmentShaderHandle);
 			glGetShaderInfoLog(this->fragmentShaderHandle, 512, &logLength, &shaderInfoLog[0]);
 			cout << "Fragment shader log: " << shaderInfoLog << endl;
-
+            
 			this->programHandle = glCreateProgram();
 			glAttachShader(this->programHandle, this->vertexShaderHandle);
 			glAttachShader(this->programHandle, this->fragmentShaderHandle);
+            
+            glBindAttribLocation(this->programHandle, 0, "position");
+            glBindAttribLocation(this->programHandle, 1, "color");
+            
 			glLinkProgram(this->programHandle);
 
 			glGetProgramInfoLog(this->programHandle, 512, &logLength, &shaderInfoLog[0]);
@@ -45,10 +49,8 @@ namespace Minigine
 		void EffectTechnique::Apply()
 		{
 			glUseProgram(this->programHandle);
-			glEnableVertexAttribArray(0);
-			glEnableVertexAttribArray(1);
 
-			Minigine::Math::Matrix4x4F id = Minigine::Math::Matrix4x4F::CreateOrthographic(0, 800, 0, 600, -1.0, 1.0f);
+			Minigine::Math::Matrix4x4F id = Minigine::Math::Matrix4x4F::CreateOrthographic(0, 960, 0, 640, -1.0, 1.0f);
 			glUniformMatrix4fv(0, 1, false, &id.m[0][0]);
 		}
 	}
