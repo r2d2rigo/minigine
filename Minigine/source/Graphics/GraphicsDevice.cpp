@@ -38,13 +38,16 @@ namespace Minigine
 
 		void GraphicsDevice::Draw() const
 		{
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
-			glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
-
-			glVertexAttribPointer(1, 3, GL_FLOAT, false, sizeof(VertexPositionColor), 0);
-			glVertexAttribPointer(0, 4, GL_UNSIGNED_BYTE, false, sizeof(VertexPositionColor), (void*)(3*4));
-
-			glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
-		}
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
+            glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
+            
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), 0);
+            glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_FALSE, sizeof(VertexPositionColor), (void*)(sizeof(float) * 3));
+            
+            glEnableVertexAttribArray(0);
+            glEnableVertexAttribArray(1);
+            
+            glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_SHORT, NULL);		
+        }
 	}
 }

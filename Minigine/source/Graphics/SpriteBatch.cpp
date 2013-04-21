@@ -8,7 +8,7 @@ namespace Minigine
 	namespace Graphics
 	{
 		SpriteBatch::SpriteBatch(const GraphicsDevice& parentDevice)
-			: graphicsDevice(parentDevice), vertexBuffer(parentDevice, true), indexBuffer(parentDevice, false)
+			: graphicsDevice(parentDevice), vertexBuffer(parentDevice, true), indexBuffer(parentDevice, true)
 		{
 			this->alreadyDrawing = false;
 			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
@@ -33,9 +33,7 @@ namespace Minigine
             // TODO: this is being lazy loaded right now because we need a valid GL context and we don't have it in the constructor!
             if (this->technique == NULL)
             {
-//                this->technique = new Minigine::Graphics::EffectTechnique("layout (location=0) attribute vec3 position; layout (location=1) attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = mul(vec4(position, 1.0), world); outcol = color;} ", "varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
-
-                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec3 position; attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = vec4(position, 1.0) * world; outcol = color;} ", "varying mediump vec4 outcol; void main() { gl_FragColor = outcol; } ");
+                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec4 position; attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = position * world; outcol = color; } ", "precision mediump float; varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
             }
             
 			this->alreadyDrawing = true;
@@ -124,7 +122,7 @@ namespace Minigine
 
 			if (this->elementCount > 0)
 			{
-				int indices[] =
+				unsigned short indices[] =
 				{
 					0, 1, 2,
 					2, 3, 0,
@@ -154,7 +152,7 @@ namespace Minigine
 
 				this->technique->Apply();
 				this->vertexBuffer.SetData(sizeof(VertexPositionColor) * vertices.size(), &vertices[0]);
-				this->indexBuffer.SetData(sizeof(int) * 12, &indices[0]);
+				this->indexBuffer.SetData(sizeof(unsigned short) * 12, &indices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
 				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer	);
 				this->graphicsDevice.Draw();
