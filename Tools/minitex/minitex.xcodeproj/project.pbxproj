@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B1FE35417241FEA00A91CBB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B1FE35317241FEA00A91CBB /* main.cpp */; };
+		5B735A0E1724781A0023811B /* libpng in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B735A0D1724781A0023811B /* libpng */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B1FE34D17241FEA00A91CBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B1FE34F17241FEA00A91CBB /* minitex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = minitex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1FE35317241FEA00A91CBB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5B735A0D1724781A0023811B /* libpng */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng; path = ../lib/libpng/libpng; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B1FE34C17241FEA00A91CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B735A0E1724781A0023811B /* libpng in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B1FE34417241FEA00A91CBB = {
+			isa = PBXGroup;
+			children = (
+				5B735A0D1724781A0023811B /* libpng */,
+				5B1FE35217241FEA00A91CBB /* minitex */,
+				5B1FE35017241FEA00A91CBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B1FE35017241FEA00A91CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B1FE34F17241FEA00A91CBB /* minitex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B1FE35217241FEA00A91CBB /* minitex */ = {
+			isa = PBXGroup;
+			children = (
+				5B1FE35317241FEA00A91CBB /* main.cpp */,
+			);
+			path = minitex;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B1FE34E17241FEA00A91CBB /* minitex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B1FE35917241FEA00A91CBB /* Build configuration list for PBXNativeTarget "minitex" */;
+			buildPhases = (
+				5B1FE34B17241FEA00A91CBB /* Sources */,
+				5B1FE34C17241FEA00A91CBB /* Frameworks */,
+				5B1FE34D17241FEA00A91CBB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = minitex;
+			productName = minitex;
+			productReference = 5B1FE34F17241FEA00A91CBB /* minitex */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B1FE34617241FEA00A91CBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = r2d2rigo;
+			};
+			buildConfigurationList = 5B1FE34917241FEA00A91CBB /* Build configuration list for PBXProject "minitex" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B1FE34417241FEA00A91CBB;
+			productRefGroup = 5B1FE35017241FEA00A91CBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B1FE34E17241FEA00A91CBB /* minitex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B1FE34B17241FEA00A91CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B1FE35417241FEA00A91CBB /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5B1FE35717241FEA00A91CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5B1FE35817241FEA00A91CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B1FE35A17241FEA00A91CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = ../include/libpng;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Library/Frameworks/**",
+					"/Library/Frameworks/libpng.framework/**",
+					"\"$(SRCROOT)/../lib/libpng\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B1FE35B17241FEA00A91CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = ../include/libpng;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Library/Frameworks/**",
+					"/Library/Frameworks/libpng.framework/**",
+					"\"$(SRCROOT)/../lib/libpng\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B1FE34917241FEA00A91CBB /* Build configuration list for PBXProject "minitex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1FE35717241FEA00A91CBB /* Debug */,
+				5B1FE35817241FEA00A91CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B1FE35917241FEA00A91CBB /* Build configuration list for PBXNativeTarget "minitex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B1FE35A17241FEA00A91CBB /* Debug */,
+				5B1FE35B17241FEA00A91CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B1FE34617241FEA00A91CBB /* Project object */;
+}
