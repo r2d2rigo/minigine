@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B12091E172600030073E4FF /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12091D172600030073E4FF /* libfreeimage.a */; };
 		5B1FE35417241FEA00A91CBB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B1FE35317241FEA00A91CBB /* main.cpp */; };
-		5B735A0E1724781A0023811B /* libpng in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B735A0D1724781A0023811B /* libpng */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B12091D172600030073E4FF /* libfreeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeimage.a; path = ../lib/libfreeimage/libfreeimage.a; sourceTree = "<group>"; };
 		5B1FE34F17241FEA00A91CBB /* minitex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = minitex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1FE35317241FEA00A91CBB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		5B735A0D1724781A0023811B /* libpng */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng; path = ../lib/libpng/libpng; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B735A0E1724781A0023811B /* libpng in Frameworks */,
+				5B12091E172600030073E4FF /* libfreeimage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +44,7 @@
 		5B1FE34417241FEA00A91CBB = {
 			isa = PBXGroup;
 			children = (
-				5B735A0D1724781A0023811B /* libpng */,
+				5B12091D172600030073E4FF /* libfreeimage.a */,
 				5B1FE35217241FEA00A91CBB /* minitex */,
 				5B1FE35017241FEA00A91CBB /* Products */,
 			);
@@ -178,12 +178,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = ../include/libpng;
+				HEADER_SEARCH_PATHS = ../include/;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Library/Frameworks/**",
-					"/Library/Frameworks/libpng.framework/**",
-					"\"$(SRCROOT)/../lib/libpng\"",
+					../lib/,
+					"\"$(SRCROOT)/../lib/libfreeimage\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -195,12 +194,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = ../include/libpng;
+				HEADER_SEARCH_PATHS = ../include/;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Library/Frameworks/**",
-					"/Library/Frameworks/libpng.framework/**",
-					"\"$(SRCROOT)/../lib/libpng\"",
+					../lib/,
+					"\"$(SRCROOT)/../lib/libfreeimage\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
