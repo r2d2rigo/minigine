@@ -12,6 +12,7 @@
 		5B560FF1171E19F4001BBD19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B560FEF171E198E001BBD19 /* QuartzCore.framework */; };
 		5BD7B53A171CC12000960CAD /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7B538171CC12000960CAD /* GLView.mm */; };
 		5BD7B53E171CC5A400960CAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B53D171CC5A400960CAD /* OpenGLES.framework */; };
+		5BE9F5981727509300F81A56 /* VertexPositionColorTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */; };
 		5BEBBF3C171B3D7000040379 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEBBF3B171B3D7000040379 /* Foundation.framework */; };
 		5BEBBF76171B3F3800040379 /* Minigine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF64171B3F3800040379 /* Minigine.cpp */; };
 		5BEBBF77171B3F3800040379 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF66171B3F3800040379 /* Game.cpp */; };
@@ -51,6 +52,8 @@
 		5BD7B537171CC10700960CAD /* GLView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLView.hpp; sourceTree = SOURCE_ROOT; };
 		5BD7B538171CC12000960CAD /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = SOURCE_ROOT; };
 		5BD7B53D171CC5A400960CAD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColorTexture.hpp; sourceTree = "<group>"; };
+		5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColorTexture.cpp; path = source/Graphics/VertexPositionColorTexture.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF38171B3D7000040379 /* libMinigineiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMinigineiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEBBF3B171B3D7000040379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BEBBF3F171B3D7000040379 /* MinigineiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MinigineiOS-Prefix.pch"; sourceTree = "<group>"; };
@@ -197,6 +200,7 @@
 				5BEBBF5A171B3EF900040379 /* TextureFormat.hpp */,
 				5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */,
 				5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */,
+				5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */,
 			);
 			name = Graphics;
 			path = include/Graphics;
@@ -225,6 +229,7 @@
 				5BEBBF6E171B3F3800040379 /* Texture2D.cpp */,
 				5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */,
 				5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */,
+				5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */,
 			);
 			name = Graphics;
 			path = ../source/Graphics;
@@ -310,6 +315,7 @@
 				5BD7B53A171CC12000960CAD /* GLView.mm in Sources */,
 				5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */,
 				5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */,
+				5BE9F5981727509300F81A56 /* VertexPositionColorTexture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
