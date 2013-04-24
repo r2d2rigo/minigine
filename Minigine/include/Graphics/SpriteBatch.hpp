@@ -3,7 +3,7 @@
 #include <vector>
 #include "../Minigine.hpp"
 #include "Math/Vector2F.hpp"
-#include "Graphics/BatchElement.hpp"
+#include "Graphics/SpriteBatchElement.hpp"
 #include "Graphics/Color.hpp"
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/Texture2D.hpp"
@@ -27,7 +27,7 @@ namespace Minigine
 			IndexBuffer indexBuffer;
 			EffectTechnique* technique;
 			bool alreadyDrawing;
-			vector<BatchElement> elements;
+			vector<SpriteBatchElement> elements;
 			vector<VertexPositionColorTexture> vertices;
 			int elementCount;
 
@@ -44,7 +44,7 @@ namespace Minigine
 		};
 
 #if _WINDOWS
-		MINIGINE_EXPIMP template class MINIGINE_API vector<BatchElement>;
+		MINIGINE_EXPIMP template class MINIGINE_API vector<SpriteBatchElement>;
 #endif
 	}
 }
