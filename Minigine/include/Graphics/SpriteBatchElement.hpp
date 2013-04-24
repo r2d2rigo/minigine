@@ -11,7 +11,7 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		struct BatchElement
+		struct SpriteBatchElement
 		{
 		public:
 			Vector2F Position;
@@ -21,7 +21,7 @@ namespace Minigine
             float Rotation;
 
 		public:
-			BatchElement()
+			SpriteBatchElement()
                 : Position(Vector2F::Zero), Size(Vector2F::Zero), Color(Color::White), Texture(NULL), Rotation(0)
 			{
 			};
