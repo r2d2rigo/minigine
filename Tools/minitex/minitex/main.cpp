@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-#if _DEBUG
+#if _DEBUG || DEBUG
     #if WIN32
         char* path = "ship1.png";
     #else
