@@ -16,6 +16,20 @@ namespace Minigine
 			this->elementCount = 0;
 			this->technique = NULL;
 
+            vector<unsigned short> indices;
+            for (unsigned short i = 0; i < SpriteBatch::MaxBatchSize; ++i)
+            {
+                indices.push_back(i * 4);
+                indices.push_back((i * 4) + 1);
+                indices.push_back((i * 4) + 2);
+
+                indices.push_back((i * 4) + 2);
+                indices.push_back((i * 4) + 3);
+                indices.push_back(i * 4);
+            }
+            
+            this->indexBuffer.SetData(sizeof(unsigned short) * SpriteBatch::MaxBatchSize * 4, &indices[0]);
+            
 			this->graphicsDevice = parentDevice;
 		}
 
@@ -33,7 +47,7 @@ namespace Minigine
             // TODO: this is being lazy loaded right now because we need a valid GL context and we don't have it in the constructor!
             if (this->technique == NULL)
             {
-                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec4 position; attribute vec4 color; attribute vec2 texcoord; uniform mat4 world; varying vec4 outcol; varying vec2 outtex; void main() { gl_Position = position * world; outcol = color; outtex = texcoord; } ", "precision mediump float; varying vec4 outcol; varying vec2 outtex; uniform sampler2D tex; void main() { gl_FragColor = texture2D(tex, outtex) * outcol; } ");
+                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec4 position; attribute vec4 color; attribute vec2 texcoord; uniform mat4 world; varying vec4 outcol; varying vec2 outtex; void main() { gl_Position = position * world; outcol = color / 255.0; outtex = texcoord; } ", "precision mediump float; varying vec4 outcol; varying vec2 outtex; uniform sampler2D tex; void main() { gl_FragColor = texture2D(tex, outtex) * outcol; } ");
             }
             
 			this->alreadyDrawing = true;
@@ -122,18 +136,10 @@ namespace Minigine
 
 			if (this->elementCount > 0)
 			{
-				unsigned short indices[] =
-				{
-					0, 1, 2,
-					2, 3, 0,
-					4, 5, 6,
-					6, 7, 4,
-				};
-
 				// TODO: don't clear. Overwrite members.
 				this->vertices.clear();
 
-				// TODO: use iterators
+				// TODO: use iterators?
 				for (int i = 0; i < this->elementCount; ++i)
 				{
 					BatchElement& currentElement = this->elements[i];
@@ -144,9 +150,10 @@ namespace Minigine
                     Vector2F horzIncrement = Vector2F(currentElement.Size.GetX() * -angleSin, currentElement.Size.GetY() * angleCos);
                     Vector2F vertIncrement = Vector2F(currentElement.Size.GetX() * angleCos, currentElement.Size.GetY() * angleSin);
 
-					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::Zero));
+                    // TODO: check if drawn texture is mirrored
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::One));
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement, currentElement.Color, Vector2F::UnitX));
-					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::One));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::Zero));
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
 
                     glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
@@ -155,10 +162,9 @@ namespace Minigine
                 
 				this->technique->Apply();
 				this->vertexBuffer.SetData(sizeof(VertexPositionColorTexture) * vertices.size(), &vertices[0]);
-				this->indexBuffer.SetData(sizeof(unsigned short) * 12, &indices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
 				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer);
-				this->graphicsDevice.Draw();
+				this->graphicsDevice.Draw(this->elementCount * 2);
 
 				this->elementCount = 0;
 			}
