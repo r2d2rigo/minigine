@@ -1,7 +1,11 @@
+#include <fstream>
 #include <../Minigine.hpp>
 #include "Graphics/Texture2D.hpp"
 #include "InvalidOperationException.hpp"
 #include <../GLConfig.hpp>
+
+using std::ifstream;
+using std::ios;
 
 namespace Minigine
 {
@@ -47,9 +51,37 @@ namespace Minigine
 
 		Texture2D& Texture2D::FromFile(const GraphicsDevice& graphicsDevice, string filename)
 		{
-			Texture2D newTexture(graphicsDevice, 1, 1);
-
-			return newTexture;
+            char magicNumber[3];
+            unsigned int textureWidth;
+            unsigned int textureHeight;
+            unsigned int dataSize;
+            byte* textureData;
+            ifstream inputFile;
+            
+            inputFile.open(filename.c_str(), ios::in | ios::binary);
+            
+            if (!inputFile.is_open())
+            {
+                // throw exception
+            }
+            
+            inputFile.read(&magicNumber[0], sizeof(char) * 3);
+            
+            // TODO: check for correct header;
+            
+            inputFile.read(reinterpret_cast<char*>(&textureWidth), sizeof(unsigned int));
+            inputFile.read(reinterpret_cast<char*>(&textureHeight), sizeof(unsigned int));
+            
+            dataSize = textureWidth * textureHeight * 4;
+            textureData = new byte[dataSize];
+            inputFile.read(reinterpret_cast<char*>(textureData), dataSize);
+                        
+            inputFile.close();
+            
+			Texture2D* newTexture = new Texture2D(graphicsDevice, textureWidth, textureHeight, TextureFormat::RGBA32);
+            newTexture->SetData(textureData);
+            
+			return *newTexture;
 		}
 	}
 }
