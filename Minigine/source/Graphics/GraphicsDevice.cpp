@@ -1,6 +1,6 @@
 #include <Graphics/GraphicsDevice.hpp>
 #include <string.h>
-#include "Graphics/VertexPositionColor.hpp"
+#include "Graphics/VertexPositionColorTexture.hpp"
 
 namespace Minigine
 {
@@ -41,11 +41,13 @@ namespace Minigine
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
             glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
             
-            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColor), 0);
-            glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_FALSE, sizeof(VertexPositionColor), (void*)(sizeof(float) * 3));
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColorTexture), 0);
+            glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_FALSE, sizeof(VertexPositionColorTexture), (void*)(sizeof(float) * 3));
+            glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(VertexPositionColorTexture), (void*)((sizeof(float) * 3) + (sizeof(byte) * 4)));
             
             glEnableVertexAttribArray(0);
             glEnableVertexAttribArray(1);
+            glEnableVertexAttribArray(2);
             
             glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_SHORT, NULL);		
         }

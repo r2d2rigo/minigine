@@ -39,6 +39,7 @@ namespace Minigine
             
             glBindAttribLocation(this->programHandle, 0, "position");
             glBindAttribLocation(this->programHandle, 1, "color");
+            glBindAttribLocation(this->programHandle, 2, "texcoord");
             
 			glLinkProgram(this->programHandle);
 

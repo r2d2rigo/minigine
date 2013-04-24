@@ -12,7 +12,7 @@ namespace Minigine
 		{
 			this->alreadyDrawing = false;
 			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
-			this->vertices = vector<VertexPositionColor>(SpriteBatch::MaxBatchSize * 4);
+			this->vertices = vector<VertexPositionColorTexture>(SpriteBatch::MaxBatchSize * 4);
 			this->elementCount = 0;
 			this->technique = NULL;
 
@@ -33,7 +33,7 @@ namespace Minigine
             // TODO: this is being lazy loaded right now because we need a valid GL context and we don't have it in the constructor!
             if (this->technique == NULL)
             {
-                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec4 position; attribute vec4 color; uniform mat4 world; varying vec4 outcol; void main() { gl_Position = position * world; outcol = color; } ", "precision mediump float; varying vec4 outcol; void main() { gl_FragColor = outcol; } ");
+                this->technique = new Minigine::Graphics::EffectTechnique("attribute vec4 position; attribute vec4 color; attribute vec2 texcoord; uniform mat4 world; varying vec4 outcol; varying vec2 outtex; void main() { gl_Position = position * world; outcol = color; outtex = texcoord; } ", "precision mediump float; varying vec4 outcol; varying vec2 outtex; uniform sampler2D tex; void main() { gl_FragColor = texture2D(tex, outtex) * outcol; } ");
             }
             
 			this->alreadyDrawing = true;
@@ -144,17 +144,20 @@ namespace Minigine
                     Vector2F horzIncrement = Vector2F(currentElement.Size.GetX() * -angleSin, currentElement.Size.GetY() * angleCos);
                     Vector2F vertIncrement = Vector2F(currentElement.Size.GetX() * angleCos, currentElement.Size.GetY() * angleSin);
 
-					vertices.push_back(VertexPositionColor(currentElement.Position, currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + horzIncrement, currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color));
-					vertices.push_back(VertexPositionColor(currentElement.Position + vertIncrement, currentElement.Color));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::Zero));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement, currentElement.Color, Vector2F::UnitX));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::One));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
+
+                    glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
 				}
 
+                
 				this->technique->Apply();
-				this->vertexBuffer.SetData(sizeof(VertexPositionColor) * vertices.size(), &vertices[0]);
+				this->vertexBuffer.SetData(sizeof(VertexPositionColorTexture) * vertices.size(), &vertices[0]);
 				this->indexBuffer.SetData(sizeof(unsigned short) * 12, &indices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
-				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer	);
+				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer);
 				this->graphicsDevice.Draw();
 
 				this->elementCount = 0;

@@ -8,7 +8,7 @@
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/Texture2D.hpp"
 #include "Graphics/EffectTechnique.hpp"
-#include "Graphics/VertexPositionColor.hpp"
+#include "Graphics/VertexPositionColorTexture.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;
@@ -28,7 +28,7 @@ namespace Minigine
 			EffectTechnique* technique;
 			bool alreadyDrawing;
 			vector<BatchElement> elements;
-			vector<VertexPositionColor> vertices;
+			vector<VertexPositionColorTexture> vertices;
 			int elementCount;
 
 		public:
