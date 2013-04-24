@@ -16,11 +16,12 @@
 		5BD7B55B171CCC4B00960CAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B55A171CCC4B00960CAD /* OpenGLES.framework */; };
 		5BD7B561171CCC4B00960CAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BD7B55F171CCC4B00960CAD /* InfoPlist.strings */; };
 		5BD7B563171CCC4B00960CAD /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7B562171CCC4B00960CAD /* main.mm */; };
+		5BE9F58F17274E5700F81A56 /* ship1.mtx in Resources */ = {isa = PBXBuildFile; fileRef = 5BE9F58E17274E4300F81A56 /* ship1.mtx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B0E5C49171F64B00096BA44 /* libMinigineiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMinigineiOS.a; path = "../../Library/Developer/Xcode/DerivedData/MinigineiOS-bbezwdhkclybwqgrkrcudcakfewy/Build/Products/Debug-iphoneos/libMinigineiOS.a"; sourceTree = "<group>"; };
-		5B560FE1171E09C6001BBD19 /* Minigame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Minigame.cpp; sourceTree = SOURCE_ROOT; };
+		5B560FE1171E09C6001BBD19 /* Minigame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Minigame.cpp; sourceTree = SOURCE_ROOT; };
 		5B560FE2171E09C6001BBD19 /* Minigame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Minigame.hpp; sourceTree = SOURCE_ROOT; };
 		5B560FF2171E1A55001BBD19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5BD7B54E171CCC4B00960CAD /* Minigine.Minigame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minigine.Minigame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +33,7 @@
 		5BD7B560171CCC4B00960CAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BD7B562171CCC4B00960CAD /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5BD7B564171CCC4B00960CAD /* Minigine.Minigame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Minigine.Minigame-Prefix.pch"; sourceTree = "<group>"; };
+		5BE9F58E17274E4300F81A56 /* ship1.mtx */ = {isa = PBXFileReference; lastKnownFileType = file; path = ship1.mtx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		5BD7B543171CCC4B00960CAD = {
 			isa = PBXGroup;
 			children = (
+				5BE9F58C17274D4700F81A56 /* Resources */,
 				5B0E5C49171F64B00096BA44 /* libMinigineiOS.a */,
 				5BD7B55C171CCC4B00960CAD /* Minigine.Minigame */,
 				5BD7B551171CCC4B00960CAD /* Frameworks */,
@@ -100,6 +103,14 @@
 				5BD7B564171CCC4B00960CAD /* Minigine.Minigame-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BE9F58C17274D4700F81A56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BE9F58E17274E4300F81A56 /* ship1.mtx */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD7B561171CCC4B00960CAD /* InfoPlist.strings in Resources */,
+				5BE9F58F17274E5700F81A56 /* ship1.mtx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

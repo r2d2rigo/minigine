@@ -1,3 +1,4 @@
+#import <UIKit/UIKit.h>
 #include "Minigame.hpp"
 #include <Graphics/SpriteBatch.hpp>
 
@@ -61,6 +62,11 @@ void Minigame::Initialize()
 	}
     
     this->spriteBatch = new SpriteBatch(graphicsDevice);
+    
+    NSString* str = [[NSBundle mainBundle] pathForResource:@"ship1" ofType:@"mtx"];
+    const char *cfilename=[str UTF8String];
+    
+//    this->texture = &Texture2D::FromFile(graphicsDevice, cfilename);
     this->texture = new Texture2D(graphicsDevice, 16, 16);
 	this->texture->SetData(data);
 }
@@ -74,10 +80,10 @@ void Minigame::Draw(float elapsedTime)
 	this->graphicsDevice.Clear(Color::Blue);
 
 	this->spriteBatch->Begin();
-	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(100, 100), Color::Yellow);
-	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(50, 50), Color::Green);
-	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(10, 10), Color::White);
-//	this->spriteBatch->Draw(this->texture, Vector2F::Zero, Vector2F(128, 128), Color::Red);
+//	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(100, 100), Color::Yellow);
+//	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(50, 50), Color::Green);
+//	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(200, 200), Color::White);
+	this->spriteBatch->Draw(*this->texture, Vector2F::Zero, Vector2F(128, 128), Color::White);
 //	this->spriteBatch->Draw(this->texture, Vector2F::Zero, Color::White);
 	this->spriteBatch->End();
 }
