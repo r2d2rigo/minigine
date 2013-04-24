@@ -36,7 +36,7 @@ namespace Minigine
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
 
-		void GraphicsDevice::Draw() const
+		void GraphicsDevice::Draw(int primitiveCount) const
 		{
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
             glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
@@ -49,7 +49,7 @@ namespace Minigine
             glEnableVertexAttribArray(1);
             glEnableVertexAttribArray(2);
             
-            glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_SHORT, NULL);		
+            glDrawElements(GL_TRIANGLES, primitiveCount * 3, GL_UNSIGNED_SHORT, NULL);
         }
 	}
 }

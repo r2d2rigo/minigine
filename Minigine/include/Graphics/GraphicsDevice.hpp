@@ -31,7 +31,7 @@ namespace Minigine
 
 			void Clear(const Color& clearColor);
 			void Clear(const Color& clearColor, const float& clearDepth);
-			void Draw() const;
+			void Draw(int primitiveCount) const;
 		};
 	}
 }
