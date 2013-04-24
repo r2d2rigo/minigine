@@ -10,6 +10,7 @@
 		5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */; };
 		5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FED171E13CD001BBD19 /* GLViewController.mm */; };
 		5B560FF1171E19F4001BBD19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B560FEF171E198E001BBD19 /* QuartzCore.framework */; };
+		5BC5C18B1728A11D0041C8A0 /* PointBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5C18A1728A11C0041C8A0 /* PointBatch.cpp */; };
 		5BD7B53A171CC12000960CAD /* GLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7B538171CC12000960CAD /* GLView.mm */; };
 		5BD7B53E171CC5A400960CAD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7B53D171CC5A400960CAD /* OpenGLES.framework */; };
 		5BE9F5981727509300F81A56 /* VertexPositionColorTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */; };
@@ -44,21 +45,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = SOURCE_ROOT; };
-		5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = SOURCE_ROOT; };
-		5B560FEC171E13A6001BBD19 /* GLViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLViewController.hpp; sourceTree = SOURCE_ROOT; };
-		5B560FED171E13CD001BBD19 /* GLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLViewController.mm; sourceTree = SOURCE_ROOT; };
+		5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
+		5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../AppDelegate.mm; sourceTree = "<group>"; };
+		5B560FEC171E13A6001BBD19 /* GLViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLViewController.hpp; sourceTree = "<group>"; };
+		5B560FED171E13CD001BBD19 /* GLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLViewController.mm; path = ../GLViewController.mm; sourceTree = "<group>"; };
 		5B560FEF171E198E001BBD19 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		5BD7B537171CC10700960CAD /* GLView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLView.hpp; sourceTree = SOURCE_ROOT; };
-		5BD7B538171CC12000960CAD /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLView.mm; sourceTree = SOURCE_ROOT; };
+		5BC5C1881728A0410041C8A0 /* PointBatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointBatch.hpp; sourceTree = "<group>"; };
+		5BC5C18A1728A11C0041C8A0 /* PointBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointBatch.cpp; path = source/Graphics/PointBatch.cpp; sourceTree = SOURCE_ROOT; };
+		5BC5C18C1728A75C0041C8A0 /* PointBatchElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PointBatchElement.hpp; sourceTree = "<group>"; };
+		5BD7B537171CC10700960CAD /* GLView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLView.hpp; sourceTree = "<group>"; };
+		5BD7B538171CC12000960CAD /* GLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GLView.mm; path = ../GLView.mm; sourceTree = "<group>"; };
 		5BD7B53D171CC5A400960CAD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColorTexture.hpp; sourceTree = "<group>"; };
 		5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColorTexture.cpp; path = source/Graphics/VertexPositionColorTexture.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF38171B3D7000040379 /* libMinigineiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMinigineiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEBBF3B171B3D7000040379 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BEBBF3F171B3D7000040379 /* MinigineiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MinigineiOS-Prefix.pch"; sourceTree = "<group>"; };
-		5BEBBF4F171B3EF900040379 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Game.hpp; path = include/Game.hpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF51171B3EF900040379 /* BatchElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BatchElement.hpp; sourceTree = "<group>"; };
+		5BEBBF4F171B3EF900040379 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Game.hpp; path = include/Game.hpp; sourceTree = "<group>"; };
+		5BEBBF51171B3EF900040379 /* SpriteBatchElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpriteBatchElement.hpp; sourceTree = "<group>"; };
 		5BEBBF52171B3EF900040379 /* Buffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Buffer.hpp; sourceTree = "<group>"; };
 		5BEBBF53171B3EF900040379 /* Color.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
 		5BEBBF54171B3EF900040379 /* Effect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Effect.hpp; sourceTree = "<group>"; };
@@ -70,14 +74,14 @@
 		5BEBBF5A171B3EF900040379 /* TextureFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TextureFormat.hpp; sourceTree = "<group>"; };
 		5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexBuffer.hpp; sourceTree = "<group>"; };
 		5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColor.hpp; sourceTree = "<group>"; };
-		5BEBBF5D171B3EF900040379 /* InvalidOperationException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = InvalidOperationException.hpp; path = include/InvalidOperationException.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF5D171B3EF900040379 /* InvalidOperationException.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = InvalidOperationException.hpp; path = include/InvalidOperationException.hpp; sourceTree = "<group>"; };
 		5BEBBF5F171B3EF900040379 /* Matrix4x4F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix4x4F.hpp; sourceTree = "<group>"; };
 		5BEBBF60171B3EF900040379 /* Vector2F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector2F.hpp; sourceTree = "<group>"; };
 		5BEBBF61171B3EF900040379 /* Vector3F.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector3F.hpp; sourceTree = "<group>"; };
-		5BEBBF62171B3F1B00040379 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF63171B3F1B00040379 /* Minigine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Minigine.hpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF64171B3F3800040379 /* Minigine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Minigine.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF66171B3F3800040379 /* Game.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Game.cpp; path = source/Game.cpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF62171B3F1B00040379 /* Math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
+		5BEBBF63171B3F1B00040379 /* Minigine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Minigine.hpp; sourceTree = "<group>"; };
+		5BEBBF64171B3F3800040379 /* Minigine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Minigine.cpp; path = ../Minigine.cpp; sourceTree = "<group>"; };
+		5BEBBF66171B3F3800040379 /* Game.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Game.cpp; sourceTree = "<group>"; };
 		5BEBBF68171B3F3800040379 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Color.cpp; path = source/Graphics/Color.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF69171B3F3800040379 /* Effect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Effect.cpp; path = source/Graphics/Effect.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF6A171B3F3800040379 /* EffectTechnique.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EffectTechnique.cpp; path = source/Graphics/EffectTechnique.cpp; sourceTree = SOURCE_ROOT; };
@@ -87,11 +91,11 @@
 		5BEBBF6E171B3F3800040379 /* Texture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture2D.cpp; path = source/Graphics/Texture2D.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexBuffer.cpp; path = source/Graphics/VertexBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColor.cpp; path = source/Graphics/VertexPositionColor.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InvalidOperationException.cpp; path = source/InvalidOperationException.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix4x4F.cpp; path = source/Math/Matrix4x4F.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF74171B3F3800040379 /* Vector2F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2F.cpp; path = source/Math/Vector2F.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF75171B3F3800040379 /* Vector3F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector3F.cpp; path = source/Math/Vector3F.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF85171B414F00040379 /* GLConfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLConfig.hpp; sourceTree = SOURCE_ROOT; };
+		5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InvalidOperationException.cpp; sourceTree = "<group>"; };
+		5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix4x4F.cpp; sourceTree = "<group>"; };
+		5BEBBF74171B3F3800040379 /* Vector2F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2F.cpp; sourceTree = "<group>"; };
+		5BEBBF75171B3F3800040379 /* Vector3F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3F.cpp; sourceTree = "<group>"; };
+		5BEBBF85171B414F00040379 /* GLConfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLConfig.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +146,9 @@
 				5BEBBF4A171B3E4800040379 /* Source */,
 				5BEBBF3E171B3D7000040379 /* Supporting Files */,
 			);
-			path = MinigineiOS;
-			sourceTree = "<group>";
+			name = MinigineiOS;
+			path = /Users/Rodrigo/minigine/Minigine;
+			sourceTree = "<absolute>";
 		};
 		5BEBBF3E171B3D7000040379 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -183,12 +188,14 @@
 				5B560FED171E13CD001BBD19 /* GLViewController.mm */,
 			);
 			name = Source;
+			path = source;
 			sourceTree = "<group>";
 		};
 		5BEBBF50171B3EF900040379 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				5BEBBF51171B3EF900040379 /* BatchElement.hpp */,
+				5BC5C18C1728A75C0041C8A0 /* PointBatchElement.hpp */,
+				5BEBBF51171B3EF900040379 /* SpriteBatchElement.hpp */,
 				5BEBBF52171B3EF900040379 /* Buffer.hpp */,
 				5BEBBF53171B3EF900040379 /* Color.hpp */,
 				5BEBBF54171B3EF900040379 /* Effect.hpp */,
@@ -201,6 +208,7 @@
 				5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */,
 				5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */,
 				5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */,
+				5BC5C1881728A0410041C8A0 /* PointBatch.hpp */,
 			);
 			name = Graphics;
 			path = include/Graphics;
@@ -230,9 +238,10 @@
 				5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */,
 				5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */,
 				5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */,
+				5BC5C18A1728A11C0041C8A0 /* PointBatch.cpp */,
 			);
 			name = Graphics;
-			path = ../source/Graphics;
+			path = source/Graphics;
 			sourceTree = "<group>";
 		};
 		5BEBBF72171B3F3800040379 /* Math */ = {
@@ -242,8 +251,7 @@
 				5BEBBF74171B3F3800040379 /* Vector2F.cpp */,
 				5BEBBF75171B3F3800040379 /* Vector3F.cpp */,
 			);
-			name = Math;
-			path = ../source/Math;
+			path = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +324,7 @@
 				5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */,
 				5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */,
 				5BE9F5981727509300F81A56 /* VertexPositionColorTexture.cpp in Sources */,
+				5BC5C18B1728A11D0041C8A0 /* PointBatch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
