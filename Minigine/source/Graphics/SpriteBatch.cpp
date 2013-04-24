@@ -11,7 +11,7 @@ namespace Minigine
 			: graphicsDevice(parentDevice), vertexBuffer(parentDevice, true), indexBuffer(parentDevice, true)
 		{
 			this->alreadyDrawing = false;
-			this->elements = vector<BatchElement>(SpriteBatch::MaxBatchSize);
+			this->elements = vector<SpriteBatchElement>(SpriteBatch::MaxBatchSize);
 			this->vertices = vector<VertexPositionColorTexture>(SpriteBatch::MaxBatchSize * 4);
 			this->elementCount = 0;
 			this->technique = NULL;
@@ -55,7 +55,7 @@ namespace Minigine
 
 		void SpriteBatch::Draw(const Vector2F& position, const Vector2F& size, const Color& color)
 		{
-			BatchElement& element = this->elements[this->elementCount];
+			SpriteBatchElement& element = this->elements[this->elementCount];
 
 			element.Position = position;
 			element.Size = size;
@@ -73,7 +73,7 @@ namespace Minigine
 
 		void SpriteBatch::Draw(const Texture2D& texture, const Vector2F& position, const Color& color)
 		{
-			BatchElement& element = this->elements[this->elementCount];
+			SpriteBatchElement& element = this->elements[this->elementCount];
 
 			element.Position = position;
 			element.Size = Vector2F(texture.GetWidth(), texture.GetHeight());
@@ -90,7 +90,7 @@ namespace Minigine
 
 		void SpriteBatch::Draw(const Texture2D& texture, const Vector2F& position, const Vector2F& size, const Color& color)
 		{
-			BatchElement& element = this->elements[this->elementCount];
+			SpriteBatchElement& element = this->elements[this->elementCount];
 
 			element.Position = position;
 			element.Size = size;
@@ -108,7 +108,7 @@ namespace Minigine
 
 		void SpriteBatch::Draw(const Texture2D& texture, const Vector2F& position, const float& rotation, const Vector2F& size, const Color& color)
 		{
-			BatchElement& element = this->elements[this->elementCount];
+			SpriteBatchElement& element = this->elements[this->elementCount];
             
 			element.Position = position;
 			element.Size = size;
@@ -142,7 +142,7 @@ namespace Minigine
 				// TODO: use iterators?
 				for (int i = 0; i < this->elementCount; ++i)
 				{
-					BatchElement& currentElement = this->elements[i];
+					SpriteBatchElement& currentElement = this->elements[i];
                     
                     float angleSin = sin(currentElement.Rotation);
                     float angleCos = cos(currentElement.Rotation);
@@ -156,7 +156,10 @@ namespace Minigine
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::Zero));
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
 
-                    glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
+                    if (currentElement.Texture != NULL)
+                    {
+                        glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
+                    }
 				}
 
                 
