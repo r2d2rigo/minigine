@@ -59,6 +59,10 @@
       <AdditionalLibraryDirectories>../Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;Minigine.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)bin\glew\*.dll" "$(OutDir)"
+copy "$(SolutionDir)bin\sfml\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -80,6 +84,10 @@
       <AdditionalDependencies>opengl32.lib;Minigine.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../Release</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)bin\glew\*.dll" "$(OutDir)"
+copy "$(SolutionDir)bin\sfml\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />

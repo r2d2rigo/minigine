@@ -80,7 +80,6 @@
   <ItemGroup>
     <ClInclude Include="GLConfig.hpp" />
     <ClInclude Include="include\Game.hpp" />
-    <ClInclude Include="include\Graphics\BatchElement.hpp" />
     <ClInclude Include="include\Graphics\Buffer.hpp" />
     <ClInclude Include="include\Graphics\Effect.hpp" />
     <ClInclude Include="include\Graphics\Effects\BasicEffect.hpp" />
@@ -88,11 +87,20 @@
     <ClInclude Include="include\Graphics\GraphicsDevice.hpp" />
     <ClInclude Include="include\Graphics\Color.hpp" />
     <ClInclude Include="include\Graphics\IndexBuffer.hpp" />
+    <ClInclude Include="include\Graphics\IVertexType.hpp" />
+    <ClInclude Include="include\Graphics\PointBatch.hpp" />
+    <ClInclude Include="include\Graphics\PointBatchElement.hpp" />
     <ClInclude Include="include\Graphics\SpriteBatch.hpp" />
+    <ClInclude Include="include\Graphics\SpriteBatchElement.hpp" />
     <ClInclude Include="include\Graphics\Texture2D.hpp" />
     <ClInclude Include="include\Graphics\TextureFormat.hpp" />
     <ClInclude Include="include\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="include\Graphics\VertexDeclaration.hpp" />
+    <ClInclude Include="include\Graphics\VertexElement.hpp" />
+    <ClInclude Include="include\Graphics\VertexElementFormat.hpp" />
+    <ClInclude Include="include\Graphics\VertexElementUsage.hpp" />
     <ClInclude Include="include\Graphics\VertexPositionColor.hpp" />
+    <ClInclude Include="include\Graphics\VertexPositionColorTexture.hpp" />
     <ClInclude Include="include\InvalidOperationException.hpp" />
     <ClInclude Include="include\Math\Matrix4x4F.hpp" />
     <ClInclude Include="include\Math\Vector2F.hpp" />
@@ -115,10 +123,12 @@
     <ClCompile Include="source\Graphics\GraphicsDevice.cpp" />
     <ClCompile Include="source\Graphics\Color.cpp" />
     <ClCompile Include="source\Graphics\IndexBuffer.cpp" />
+    <ClCompile Include="source\Graphics\PointBatch.cpp" />
     <ClCompile Include="source\Graphics\SpriteBatch.cpp" />
     <ClCompile Include="source\Graphics\Texture2D.cpp" />
     <ClCompile Include="source\Graphics\VertexBuffer.cpp" />
     <ClCompile Include="source\Graphics\VertexPositionColor.cpp" />
+    <ClCompile Include="source\Graphics\VertexPositionColorTexture.cpp" />
     <ClCompile Include="source\InvalidOperationException.cpp" />
     <ClCompile Include="source\Math\Matrix4x4F.cpp" />
     <ClCompile Include="source\Math\Vector2F.cpp" />
