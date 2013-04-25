@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\Graphics\Color.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\Effect.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\EffectTechnique.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="source\Game.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\InvalidOperationException.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\GraphicsDevice.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\IndexBuffer.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Math\Matrix4x4F.cpp">
+      <Filter>source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\PointBatch.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\SpriteBatch.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\Texture2D.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Math\Vector2F.cpp">
+      <Filter>source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Math\Vector3F.cpp">
+      <Filter>source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\VertexPositionColorTexture.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\VertexPositionColor.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Graphics\VertexBuffer.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GLConfig.hpp" />
+    <ClInclude Include="Math.hpp" />
+    <ClInclude Include="Minigine.hpp" />
+    <ClInclude Include="include\Game.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InvalidOperationException.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Math\Vector2F.hpp">
+      <Filter>include\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Math\Vector3F.hpp">
+      <Filter>include\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Math\Matrix4x4F.hpp">
+      <Filter>include\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Buffer.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Color.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Effect.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\EffectTechnique.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\GraphicsDevice.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\IndexBuffer.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\PointBatch.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\PointBatchElement.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\SpriteBatch.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\SpriteBatchElement.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Texture2D.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\TextureFormat.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexBuffer.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexPositionColor.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexPositionColorTexture.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\Effects\BasicEffect.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexElement.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexElementUsage.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexElementFormat.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexDeclaration.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\IVertexType.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{d25e4917-214d-493b-b9d9-997fb5e1bf19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{b3f0190d-de56-433c-affc-a63f81b699d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Math">
+      <UniqueIdentifier>{586528c3-c55b-4f9f-a9ca-ab09a118d505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Graphics">
+      <UniqueIdentifier>{2cf0f99e-2c61-4ee4-abac-0b92f6f57514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Math">
+      <UniqueIdentifier>{d63c0f34-bf18-496c-ad5a-f54c1610b9c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Graphics">
+      <UniqueIdentifier>{00a1c7ec-c9eb-4328-9c1c-8340666dfeec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
