@@ -16,7 +16,6 @@
 *.opensdf
 *.suo
 *.user
-*.filters
 Debug/
 Release/
 ipch/
