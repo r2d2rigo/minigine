@@ -82,6 +82,11 @@ namespace Minigine
                     // TODO: check if drawn texture is mirrored
 					vertices.push_back(VertexPositionColor(currentElement.Position, currentElement.Color));
 				}
+
+				// TODO: non-mobile OpenGL must use glPointSize instead of the shader value!
+#if _WINDOWS
+				glPointSize(10.0f);
+#endif
                 
 				this->technique->Apply();
 				this->vertexBuffer.SetData(sizeof(VertexPositionColor) * vertices.size(), &vertices[0]);
