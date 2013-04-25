@@ -45,7 +45,7 @@ namespace Minigine
 			}
 
             // TODO: get a correct timestep
-			Update(0.0f);
+			Update(0.033f);
 			Draw(0.0f);
 
 			gameWindow.display();
