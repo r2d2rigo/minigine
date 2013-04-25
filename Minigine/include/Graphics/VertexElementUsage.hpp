@@ -4,11 +4,14 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		enum VertexElementUsage
+		namespace VertexElementUsage
 		{
-			Position = 0,
-			Color,
-			TexCoord,
-		};
+			enum VertexElementUsage
+			{
+				Position = 0,
+				Color,
+				TexCoord,
+			};
+		}
 	}
 }

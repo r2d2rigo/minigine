@@ -4,12 +4,15 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		enum VertexElementFormat
+		namespace VertexElementFormat
 		{
-			Float = 0,
-			Vector2F,
-			Vector3F,
-			Color,
-		};
+			enum VertexElementFormat
+			{
+				Float,
+				Vector2F,
+				Vector3F,
+				Color,
+			};
+		}
 	}
 }
