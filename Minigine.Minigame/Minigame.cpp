@@ -1,4 +1,6 @@
+#if IOS
 #import <UIKit/UIKit.h>
+#endif
 #include "Minigame.hpp"
 #include <Graphics/SpriteBatch.hpp>
 
@@ -58,12 +60,15 @@ void Minigame::Initialize()
     
     this->spriteBatch = new SpriteBatch(graphicsDevice);
     
+#if IOS
     NSString* str = [[NSBundle mainBundle] pathForResource:@"ship1" ofType:@"mtx"];
     const char *cfilename=[str UTF8String];
     
     this->texture = &Texture2D::FromFile(graphicsDevice, cfilename);
-//    this->texture = new Texture2D(graphicsDevice, 16, 16);
-//	this->texture->SetData(data);
+#else
+    this->texture = new Texture2D(graphicsDevice, 16, 16);
+	this->texture->SetData(data);
+#endif
     
     this->pointBatch = new PointBatch(graphicsDevice);
 }
@@ -74,7 +79,7 @@ void Minigame::Update(float elapsedTime)
 
 void Minigame::Draw(float elapsedTime)
 {
-	this->graphicsDevice.Clear(Color::Blue);
+	this->graphicsDevice.Clear(Color::Black);
 
 //	this->spriteBatch->Begin();
 //	this->spriteBatch->Draw(Vector2F::Zero, Vector2F(256, 256), Color::White);
