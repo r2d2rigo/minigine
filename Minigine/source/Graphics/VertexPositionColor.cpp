@@ -1,17 +1,11 @@
 #include "Graphics/VertexPositionColor.hpp"
 
+using std::vector;
+
 namespace Minigine
 {
 	namespace Graphics
 	{
-		VertexPositionColor::VertexPositionColor() 
-			: Position(Vector3F::Zero), Color(Color::White)
-		{
-		}
-
-		VertexPositionColor::VertexPositionColor(const Vector3F& position, const Minigine::Graphics::Color& color)
-			: Position(position), Color(color)
-		{
-		}
+        const VertexDeclaration& VertexPositionColor::declaration = VertexDeclaration(vector<VertexElement>());
 	}
 }
