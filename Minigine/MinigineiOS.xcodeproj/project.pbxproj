@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0950FE1729FF9900E49AAC /* VertexPositionColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B0950FD1729FF9900E49AAC /* VertexPositionColor.cpp */; };
 		5B560FEB171E0D6F001BBD19 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */; };
 		5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5B560FED171E13CD001BBD19 /* GLViewController.mm */; };
 		5B560FF1171E19F4001BBD19 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B560FEF171E198E001BBD19 /* QuartzCore.framework */; };
@@ -25,7 +26,6 @@
 		5BEBBF7D171B3F3800040379 /* SpriteBatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */; };
 		5BEBBF7E171B3F3800040379 /* Texture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6E171B3F3800040379 /* Texture2D.cpp */; };
 		5BEBBF7F171B3F3800040379 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */; };
-		5BEBBF80171B3F3800040379 /* VertexPositionColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */; };
 		5BEBBF81171B3F3800040379 /* InvalidOperationException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */; };
 		5BEBBF82171B3F3800040379 /* Matrix4x4F.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */; };
 		5BEBBF83171B3F3800040379 /* Vector2F.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBBF74171B3F3800040379 /* Vector2F.cpp */; };
@@ -45,6 +45,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0950F71729E7AE00E49AAC /* IVertexType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IVertexType.hpp; sourceTree = "<group>"; };
+		5B0950F81729E7AE00E49AAC /* VertexDeclaration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexDeclaration.hpp; sourceTree = "<group>"; };
+		5B0950F91729E7AE00E49AAC /* VertexElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElement.hpp; sourceTree = "<group>"; };
+		5B0950FA1729E7AE00E49AAC /* VertexElementFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementFormat.hpp; sourceTree = "<group>"; };
+		5B0950FB1729E7AE00E49AAC /* VertexElementUsage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementUsage.hpp; sourceTree = "<group>"; };
+		5B0950FD1729FF9900E49AAC /* VertexPositionColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColor.cpp; path = source/Graphics/VertexPositionColor.cpp; sourceTree = SOURCE_ROOT; };
 		5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
 		5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../AppDelegate.mm; sourceTree = "<group>"; };
 		5B560FEC171E13A6001BBD19 /* GLViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLViewController.hpp; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteBatch.cpp; path = source/Graphics/SpriteBatch.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF6E171B3F3800040379 /* Texture2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture2D.cpp; path = source/Graphics/Texture2D.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexBuffer.cpp; path = source/Graphics/VertexBuffer.cpp; sourceTree = SOURCE_ROOT; };
-		5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColor.cpp; path = source/Graphics/VertexPositionColor.cpp; sourceTree = SOURCE_ROOT; };
 		5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InvalidOperationException.cpp; sourceTree = "<group>"; };
 		5BEBBF73171B3F3800040379 /* Matrix4x4F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix4x4F.cpp; sourceTree = "<group>"; };
 		5BEBBF74171B3F3800040379 /* Vector2F.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2F.cpp; sourceTree = "<group>"; };
@@ -194,21 +199,26 @@
 		5BEBBF50171B3EF900040379 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				5BC5C18C1728A75C0041C8A0 /* PointBatchElement.hpp */,
-				5BEBBF51171B3EF900040379 /* SpriteBatchElement.hpp */,
 				5BEBBF52171B3EF900040379 /* Buffer.hpp */,
 				5BEBBF53171B3EF900040379 /* Color.hpp */,
 				5BEBBF54171B3EF900040379 /* Effect.hpp */,
 				5BEBBF55171B3EF900040379 /* EffectTechnique.hpp */,
 				5BEBBF56171B3EF900040379 /* GraphicsDevice.hpp */,
 				5BEBBF57171B3EF900040379 /* IndexBuffer.hpp */,
+				5B0950F71729E7AE00E49AAC /* IVertexType.hpp */,
+				5BC5C1881728A0410041C8A0 /* PointBatch.hpp */,
+				5BC5C18C1728A75C0041C8A0 /* PointBatchElement.hpp */,
 				5BEBBF58171B3EF900040379 /* SpriteBatch.hpp */,
+				5BEBBF51171B3EF900040379 /* SpriteBatchElement.hpp */,
 				5BEBBF59171B3EF900040379 /* Texture2D.hpp */,
 				5BEBBF5A171B3EF900040379 /* TextureFormat.hpp */,
 				5BEBBF5B171B3EF900040379 /* VertexBuffer.hpp */,
+				5B0950F81729E7AE00E49AAC /* VertexDeclaration.hpp */,
+				5B0950F91729E7AE00E49AAC /* VertexElement.hpp */,
+				5B0950FA1729E7AE00E49AAC /* VertexElementFormat.hpp */,
+				5B0950FB1729E7AE00E49AAC /* VertexElementUsage.hpp */,
 				5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */,
 				5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */,
-				5BC5C1881728A0410041C8A0 /* PointBatch.hpp */,
 			);
 			name = Graphics;
 			path = include/Graphics;
@@ -228,6 +238,7 @@
 		5BEBBF67171B3F3800040379 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				5B0950FD1729FF9900E49AAC /* VertexPositionColor.cpp */,
 				5BEBBF68171B3F3800040379 /* Color.cpp */,
 				5BEBBF69171B3F3800040379 /* Effect.cpp */,
 				5BEBBF6A171B3F3800040379 /* EffectTechnique.cpp */,
@@ -236,7 +247,6 @@
 				5BEBBF6D171B3F3800040379 /* SpriteBatch.cpp */,
 				5BEBBF6E171B3F3800040379 /* Texture2D.cpp */,
 				5BEBBF6F171B3F3800040379 /* VertexBuffer.cpp */,
-				5BEBBF70171B3F3800040379 /* VertexPositionColor.cpp */,
 				5BE9F5961727509300F81A56 /* VertexPositionColorTexture.cpp */,
 				5BC5C18A1728A11C0041C8A0 /* PointBatch.cpp */,
 			);
@@ -315,7 +325,6 @@
 				5BEBBF7D171B3F3800040379 /* SpriteBatch.cpp in Sources */,
 				5BEBBF7E171B3F3800040379 /* Texture2D.cpp in Sources */,
 				5BEBBF7F171B3F3800040379 /* VertexBuffer.cpp in Sources */,
-				5BEBBF80171B3F3800040379 /* VertexPositionColor.cpp in Sources */,
 				5BEBBF81171B3F3800040379 /* InvalidOperationException.cpp in Sources */,
 				5BEBBF82171B3F3800040379 /* Matrix4x4F.cpp in Sources */,
 				5BEBBF83171B3F3800040379 /* Vector2F.cpp in Sources */,
@@ -325,6 +334,7 @@
 				5B560FEE171E13CD001BBD19 /* GLViewController.mm in Sources */,
 				5BE9F5981727509300F81A56 /* VertexPositionColorTexture.cpp in Sources */,
 				5BC5C18B1728A11D0041C8A0 /* PointBatch.cpp in Sources */,
+				5B0950FE1729FF9900E49AAC /* VertexPositionColor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
