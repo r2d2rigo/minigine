@@ -3,22 +3,17 @@
 #include <../Minigine.hpp>
 #include "Math/Vector3F.hpp"
 #include "Graphics/Color.hpp"
-#include "Graphics/IVertexType.hpp"
 
 using Minigine::Math::Vector2F;
 using Minigine::Math::Vector3F;
 using Minigine::Graphics::Color;
-using Minigine::Graphics::IVertexType;
 
 namespace Minigine
 {
 	namespace Graphics
 	{
-		struct MINIGINE_API VertexPositionColorTexture : public IVertexType
-		{
-        private:
-            static const VertexDeclaration& declaration;
-		
+		struct MINIGINE_API VertexPositionColorTexture
+        {		
         public:
 			Vector3F Position;
 			Color Color;
@@ -33,11 +28,6 @@ namespace Minigine
 			VertexPositionColorTexture(const Vector3F& position, const Minigine::Graphics::Color& color, const Vector2F& texCoord)
                 : Position(position), Color(color), TexCoord(texCoord)
             {
-            }
-            
-            virtual const VertexDeclaration& GetVertexDeclaration() const
-            {
-                return VertexPositionColorTexture::declaration;
             }
 		};
 	}
