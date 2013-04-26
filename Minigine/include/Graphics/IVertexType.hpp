@@ -10,8 +10,8 @@ namespace Minigine
 		struct MINIGINE_API IVertexType
 		{
 		public:
-			virtual ~IVertexType();
-			virtual VertexDeclaration& GetVertexDeclaration() = 0;
+			virtual ~IVertexType() { };
+			virtual const VertexDeclaration& GetVertexDeclaration() const = 0;
 		};
 	}
 }
