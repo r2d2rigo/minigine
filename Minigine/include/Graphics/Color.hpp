@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 
 namespace Minigine
 {

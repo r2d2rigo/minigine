@@ -1,11 +1,8 @@
 #pragma once
 
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "VertexElementFormat.hpp"
 #include "VertexElementUsage.hpp"
-
-using Minigine::Graphics::VertexElementFormat::VertexElementFormat;
-using Minigine::Graphics::VertexElementUsage::VertexElementUsage;
 
 namespace Minigine
 {

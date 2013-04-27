@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "VertexDeclaration.hpp"
 
 namespace Minigine

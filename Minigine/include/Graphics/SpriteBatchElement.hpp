@@ -1,11 +1,10 @@
 #pragma once
 
 #include "Math/Vector2F.hpp"
-#include "Graphics/Color.hpp"
-#include "Graphics/Texture2D.hpp"
+#include "Color.hpp"
+#include "Texture2D.hpp"
 
 using Minigine::Math::Vector2F;
-using Minigine::Graphics::Color;
 
 namespace Minigine
 {

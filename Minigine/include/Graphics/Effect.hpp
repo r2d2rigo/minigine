@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "EffectTechnique.hpp"
 
 using std::string;

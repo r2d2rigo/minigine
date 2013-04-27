@@ -1,7 +1,7 @@
 #pragma once
 
-#include <../Minigine.hpp>
-#include "Math/Vector3F.hpp"
+#include "../Minigine.hpp"
+#include "../Math/Vector3F.hpp"
 #include "Color.hpp"
 #include "VertexDeclaration.hpp"
 

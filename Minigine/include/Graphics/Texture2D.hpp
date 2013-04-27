@@ -1,8 +1,7 @@
 #pragma once
 
 #include <string>
-
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "GraphicsDevice.hpp"
 #include "TextureFormat.hpp"
 

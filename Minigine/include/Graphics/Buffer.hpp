@@ -1,7 +1,6 @@
 #pragma once
 
-#include <../Minigine.hpp>
-//#include "Graphics/GraphicsDevice.hpp"
+#include "../Minigine.hpp"
 
 namespace Minigine
 {

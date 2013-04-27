@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "Buffer.hpp"
 #include "VertexDeclaration.hpp"
 

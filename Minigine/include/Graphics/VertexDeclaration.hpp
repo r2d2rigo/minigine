@@ -1,11 +1,10 @@
 #pragma once
 
 #include <vector>
-#include <../Minigine.hpp>
+#include "../Minigine.hpp"
 #include "VertexElement.hpp"
 
 using std::vector;
-using Minigine::Graphics::VertexElement;
 
 namespace Minigine
 {

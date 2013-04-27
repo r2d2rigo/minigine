@@ -2,12 +2,12 @@
 
 #include <vector>
 #include "../Minigine.hpp"
-#include "Math/Vector2F.hpp"
-#include "Graphics/PointBatchElement.hpp"
-#include "Graphics/Color.hpp"
-#include "Graphics/GraphicsDevice.hpp"
-#include "Graphics/EffectTechnique.hpp"
-#include "Graphics/VertexPositionColorSize.hpp"
+#include "../Math/Vector2F.hpp"
+#include "PointBatchElement.hpp"
+#include "Color.hpp"
+#include "GraphicsDevice.hpp"
+#include "EffectTechnique.hpp"
+#include "VertexPositionColorSize.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;

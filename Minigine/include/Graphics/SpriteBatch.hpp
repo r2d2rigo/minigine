@@ -3,12 +3,12 @@
 #include <vector>
 #include "../Minigine.hpp"
 #include "Math/Vector2F.hpp"
-#include "Graphics/SpriteBatchElement.hpp"
-#include "Graphics/Color.hpp"
-#include "Graphics/GraphicsDevice.hpp"
-#include "Graphics/Texture2D.hpp"
-#include "Graphics/EffectTechnique.hpp"
-#include "Graphics/VertexPositionColorTexture.hpp"
+#include "SpriteBatchElement.hpp"
+#include "Color.hpp"
+#include "GraphicsDevice.hpp"
+#include "Texture2D.hpp"
+#include "EffectTechnique.hpp"
+#include "VertexPositionColorTexture.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;
