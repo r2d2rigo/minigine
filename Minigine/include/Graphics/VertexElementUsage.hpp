@@ -11,6 +11,7 @@ namespace Minigine
 				Position = 0,
 				Color,
 				TexCoord,
+                PointSize,
 			};
 		}
 	}
