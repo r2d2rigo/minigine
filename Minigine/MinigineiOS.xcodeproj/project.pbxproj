@@ -48,6 +48,7 @@
 		5B0950F91729E7AE00E49AAC /* VertexElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElement.hpp; sourceTree = "<group>"; };
 		5B0950FA1729E7AE00E49AAC /* VertexElementFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementFormat.hpp; sourceTree = "<group>"; };
 		5B0950FB1729E7AE00E49AAC /* VertexElementUsage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementUsage.hpp; sourceTree = "<group>"; };
+		5B0FFADA172B558000CEB0AC /* VertexPositionColorSize.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColorSize.hpp; sourceTree = "<group>"; };
 		5B560FE8171E0CAD001BBD19 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
 		5B560FEA171E0D6F001BBD19 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../AppDelegate.mm; sourceTree = "<group>"; };
 		5B560FEC171E13A6001BBD19 /* GLViewController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLViewController.hpp; sourceTree = "<group>"; };
@@ -215,6 +216,7 @@
 				5B0950FB1729E7AE00E49AAC /* VertexElementUsage.hpp */,
 				5BEBBF5C171B3EF900040379 /* VertexPositionColor.hpp */,
 				5BE9F59017274FA000F81A56 /* VertexPositionColorTexture.hpp */,
+				5B0FFADA172B558000CEB0AC /* VertexPositionColorSize.hpp */,
 			);
 			name = Graphics;
 			path = include/Graphics;
