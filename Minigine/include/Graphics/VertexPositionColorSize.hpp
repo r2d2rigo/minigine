@@ -3,9 +3,9 @@
 #include "../Minigine.hpp"
 #include "../Math/Vector3F.hpp"
 #include "Color.hpp"
+#include "VertexDeclaration.hpp"
 
 using Minigine::Math::Vector3F;
-using Minigine::Graphics::Color;
 
 namespace Minigine
 {
@@ -13,6 +13,9 @@ namespace Minigine
 	{
 		struct MINIGINE_API VertexPositionColorSize
 		{
+        public:
+            const static VertexDeclaration& VertexFormat;
+            
 		public:
 			Vector3F Position;
 			Color Color;

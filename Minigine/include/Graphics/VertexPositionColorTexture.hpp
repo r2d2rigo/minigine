@@ -2,18 +2,21 @@
 
 #include <../Minigine.hpp>
 #include "Math/Vector3F.hpp"
-#include "Graphics/Color.hpp"
+#include "Color.hpp"
+#include "VertexDeclaration.hpp"
 
 using Minigine::Math::Vector2F;
 using Minigine::Math::Vector3F;
-using Minigine::Graphics::Color;
 
 namespace Minigine
 {
 	namespace Graphics
 	{
 		struct MINIGINE_API VertexPositionColorTexture
-        {		
+        {
+        public:
+            const static VertexDeclaration& VertexFormat;
+            
         public:
 			Vector3F Position;
 			Color Color;
