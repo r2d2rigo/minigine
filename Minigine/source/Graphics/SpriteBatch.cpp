@@ -8,7 +8,7 @@ namespace Minigine
 	namespace Graphics
 	{
 		SpriteBatch::SpriteBatch(const GraphicsDevice& parentDevice)
-			: graphicsDevice(parentDevice), vertexBuffer(parentDevice, true), indexBuffer(parentDevice, true)
+            : graphicsDevice(parentDevice), vertexBuffer(parentDevice, VertexPositionColorTexture::VertexFormat, true), indexBuffer(parentDevice, true)
 		{
 			this->alreadyDrawing = false;
 			this->elements = vector<SpriteBatchElement>(SpriteBatch::MaxBatchSize);
