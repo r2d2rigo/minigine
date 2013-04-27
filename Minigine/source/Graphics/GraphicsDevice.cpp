@@ -46,6 +46,7 @@ namespace Minigine
             
             const VertexDeclaration& declaration = this->vertexBuffer->GetVertexDeclaration();
             int vertexStride = declaration.GetStride();
+            int primitiveMultiplier;
             
             // TODO: use iterators
             for (int i = 0; i < declaration.GetElements().size(); ++i)
@@ -94,14 +95,16 @@ namespace Minigine
             {
                 case PrimitiveType::PointList:
                     drawType = GL_POINTS;
+                    primitiveMultiplier = 1;
                     break;
                     
                 case PrimitiveType::TriangleList:
                     drawType = GL_TRIANGLES;
+                    primitiveMultiplier = 3;
                     break;
             }
             
-            glDrawElements(drawType, primitiveCount * 3, GL_UNSIGNED_SHORT, NULL);
+            glDrawElements(drawType, primitiveCount * primitiveMultiplier, GL_UNSIGNED_SHORT, NULL);
         }
 	}
 }
