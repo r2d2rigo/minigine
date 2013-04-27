@@ -90,7 +90,7 @@ void Minigame::Draw(float elapsedTime)
 //	this->spriteBatch->End();
 
     this->pointBatch->Begin();
-    this->pointBatch->Draw(Vector2F(100, 100), 1.0f, Color::Red);
-    this->pointBatch->Draw(Vector2F(200, 100), 1.0f, Color::Green);
+    this->pointBatch->Draw(Vector2F(100, 100), Color::Red, 10.0f);
+    this->pointBatch->Draw(Vector2F(200, 100), Color::Green, 5.0f);
     this->pointBatch->End();
 }
