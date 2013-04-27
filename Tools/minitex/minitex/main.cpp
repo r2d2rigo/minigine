@@ -56,7 +56,7 @@ int main(int argc, const char * argv[])
 	outputFile << 'M' << 'T' << 'X';
 	
 	outputFile.write(reinterpret_cast<char*>(&imageWidth), sizeof(int));
-	outputFile.write(reinterpret_cast<char*>(&imageWidth), sizeof(int));
+	outputFile.write(reinterpret_cast<char*>(&imageHeight), sizeof(int));
 	outputFile.write(reinterpret_cast<char*>(imageData), imageWidth * imageHeight * (imageBpp / 8));
 
 	outputFile.close();
