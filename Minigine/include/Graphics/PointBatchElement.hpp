@@ -15,12 +15,12 @@ namespace Minigine
 		{
 		public:
 			Vector2F Position;
-			float Size;
 			Color Color;
+			float Size;
 
 		public:
 			PointBatchElement()
-                : Position(Vector2F::Zero), Size(0.0f), Color(Color::White)
+                : Position(Vector2F::Zero), Color(Color::White), Size(0.0f)
 			{
 			};
 		};

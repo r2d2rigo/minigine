@@ -19,12 +19,12 @@ namespace Minigine
             float Size;
             
 		public:
-            VertexPositionColor()
+            VertexPositionColorSize()
                 : Position(Vector3F::Zero), Color(Color::White), Size(0.0f)
             {
             }
             
-            VertexPositionColor(const Vector3F& position, const Minigine::Graphics::Color& color, const float& size)
+            VertexPositionColorSize(const Vector3F& position, const Minigine::Graphics::Color& color, const float& size)
                 : Position(position), Color(color), Size(size)
             {
             }

@@ -7,7 +7,7 @@
 #include "Graphics/Color.hpp"
 #include "Graphics/GraphicsDevice.hpp"
 #include "Graphics/EffectTechnique.hpp"
-#include "Graphics/VertexPositionColor.hpp"
+#include "Graphics/VertexPositionColorSize.hpp"
 
 using std::vector;
 using Minigine::Math::Vector2F;
@@ -27,7 +27,7 @@ namespace Minigine
 			EffectTechnique* technique;
 			bool alreadyDrawing;
 			vector<PointBatchElement> elements;
-			vector<VertexPositionColor> vertices;
+			vector<VertexPositionColorSize> vertices;
 			int elementCount;
             
 		public:
@@ -35,7 +35,7 @@ namespace Minigine
 			~PointBatch();
             
 			void Begin() throw(...);
-			void Draw(const Vector2F& position, const float& size, const Color& color);
+			void Draw(const Vector2F& position, const Color& color, const float& size);
 			void End() throw(...);
 		};
         
