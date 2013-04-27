@@ -5,6 +5,7 @@
 #include "Color.hpp"
 #include "IndexBuffer.hpp"
 #include "VertexBuffer.hpp"
+#include "PrimitiveType.hpp"
 
 namespace Minigine
 {
@@ -31,7 +32,7 @@ namespace Minigine
 
 			void Clear(const Color& clearColor);
 			void Clear(const Color& clearColor, const float& clearDepth);
-			void Draw(int primitiveCount) const;
+			void Draw(PrimitiveType primitiveType, int primitiveCount) const;
 		};
 	}
 }

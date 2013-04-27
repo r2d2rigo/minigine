@@ -22,7 +22,8 @@ namespace Minigine
             const vector<VertexElement>& GetElements() const { return this->elements; }
             
         public:
-            VertexDeclaration(const vector<VertexElement>& vertexElements) : elements(vertexElements)
+            VertexDeclaration(const vector<VertexElement>& vertexElements)
+                : elements(vertexElements)
             {
                 this->stride = 0;
 

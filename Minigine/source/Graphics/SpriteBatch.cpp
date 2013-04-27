@@ -167,7 +167,7 @@ namespace Minigine
 				this->vertexBuffer.SetData(sizeof(VertexPositionColorTexture) * vertices.size(), &vertices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
 				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer);
-				this->graphicsDevice.Draw(this->elementCount * 2);
+				this->graphicsDevice.Draw(PrimitiveType::TriangleList, this->elementCount * 2);
 
 				this->elementCount = 0;
 			}

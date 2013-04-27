@@ -92,7 +92,7 @@ namespace Minigine
 				this->vertexBuffer.SetData(sizeof(VertexPositionColorSize) * vertices.size(), &vertices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
 				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer);
-				this->graphicsDevice.Draw(this->elementCount);
+				this->graphicsDevice.Draw(PrimitiveType::PointList, this->elementCount);
                 
 				this->elementCount = 0;
 			}
