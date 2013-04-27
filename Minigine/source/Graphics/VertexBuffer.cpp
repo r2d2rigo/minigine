@@ -5,8 +5,8 @@ namespace Minigine
 {
 	namespace Graphics
 	{
-		VertexBuffer::VertexBuffer(const GraphicsDevice& graphicsDevice, const bool& isDynamic) 
-			: Buffer(graphicsDevice, isDynamic)
+		VertexBuffer::VertexBuffer(const GraphicsDevice& graphicsDevice, const VertexDeclaration& declaration, const bool& isDynamic)
+			: Buffer(graphicsDevice, isDynamic), vertexDeclaration(declaration)
 		{
 			glGenBuffers(1, &this->handle);
 		}
