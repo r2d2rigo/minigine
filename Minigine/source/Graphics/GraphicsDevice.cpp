@@ -38,9 +38,6 @@ namespace Minigine
 
 		void GraphicsDevice::Draw(PrimitiveType primitiveType, int primitiveCount) const
 		{
-//            glEnable(GL_BLEND);
-//            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->indexBuffer->GetHandle());
             glBindBuffer(GL_ARRAY_BUFFER, this->vertexBuffer->GetHandle());
             
