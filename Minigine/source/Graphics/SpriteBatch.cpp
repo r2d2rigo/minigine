@@ -162,6 +162,8 @@ namespace Minigine
                     }
 				}
 
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
                 
 				this->technique->Apply();
 				this->vertexBuffer.SetData(sizeof(VertexPositionColorTexture) * vertices.size(), &vertices[0]);
