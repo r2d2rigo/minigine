@@ -58,7 +58,7 @@ namespace Minigine
 			return !(*this == c);
 		}
         
-        Color& Color::Lerp(const Color &c1, const Color &c2, const float& amount)
+        Color Color::Lerp(const Color &c1, const Color &c2, const float& amount)
         {
             Color c;
             float inverseAmount = 1.0f - amount;
