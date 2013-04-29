@@ -57,5 +57,19 @@ namespace Minigine
 		{
 			return !(*this == c);
 		}
+        
+        Color& Color::Lerp(const Color &c1, const Color &c2, const float& amount)
+        {
+            Color c;
+            float inverseAmount = 1.0f - amount;
+            
+            // TODO: check for overflow?
+            c.SetR((byte)((c1.GetR() * amount) + (c2.GetR() * inverseAmount)));
+            c.SetG((byte)((c1.GetG() * amount) + (c2.GetG() * inverseAmount)));
+            c.SetB((byte)((c1.GetB() * amount) + (c2.GetB() * inverseAmount)));
+            c.SetA((byte)((c1.GetA() * amount) + (c2.GetA() * inverseAmount)));
+            
+            return c;
+        }
 	}
 }

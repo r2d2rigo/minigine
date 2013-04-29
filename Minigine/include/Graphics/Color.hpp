@@ -45,6 +45,8 @@ namespace Minigine
 
 			bool operator==(const Color& c) const;
 			bool operator!=(const Color& c) const;
+            
+            static Color Lerp(const Color& c1, const Color& c2, const float& amount);
 		};
 	}
 }
