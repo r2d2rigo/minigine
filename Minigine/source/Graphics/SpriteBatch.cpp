@@ -147,8 +147,11 @@ namespace Minigine
                     float angleSin = sin(currentElement.Rotation);
                     float angleCos = cos(currentElement.Rotation);
                     
-                    Vector2F horzIncrement = Vector2F(currentElement.Size.GetX() * -angleSin, currentElement.Size.GetY() * angleCos);
-                    Vector2F vertIncrement = Vector2F(currentElement.Size.GetX() * angleCos, currentElement.Size.GetY() * angleSin);
+					float xSize = currentElement.Size.GetX();
+					float ySize = currentElement.Size.GetY();
+
+                    Vector2F horzIncrement = Vector2F(xSize * angleCos, xSize * angleSin);
+                    Vector2F vertIncrement = Vector2F(ySize * -angleSin, ySize * angleCos);
 
                     // TODO: check if drawn texture is mirrored
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::One));
