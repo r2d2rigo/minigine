@@ -1,4 +1,4 @@
-#include "VertexPositionColor.hpp"
+#include "Graphics/VertexPositionColor.hpp"
 
 namespace Minigine
 {

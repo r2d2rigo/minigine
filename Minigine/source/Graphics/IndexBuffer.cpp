@@ -1,4 +1,4 @@
-#include <Graphics/IndexBuffer.hpp>
+#include "Graphics/IndexBuffer.hpp"
 #include <../GLConfig.hpp>
 	
 namespace Minigine

@@ -50,6 +50,9 @@
     <ClCompile Include="source\Graphics\VertexBuffer.cpp">
       <Filter>source\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="source\Graphics\VertexPositionColorSize.cpp">
+      <Filter>source\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLConfig.hpp" />
@@ -131,6 +134,9 @@
       <Filter>include\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="include\Graphics\IVertexType.hpp">
+      <Filter>include\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Graphics\VertexPositionColorSize.hpp">
       <Filter>include\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

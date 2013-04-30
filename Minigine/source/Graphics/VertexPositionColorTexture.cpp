@@ -1,4 +1,4 @@
-#include "VertexPositionColorTexture.hpp"
+#include "Graphics/VertexPositionColorTexture.hpp"
 
 namespace Minigine
 {

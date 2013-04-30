@@ -1,6 +1,6 @@
 #include <string.h>
-#include <Graphics/GraphicsDevice.hpp>
-#include "VertexPositionColorSize.hpp"
+#include "Graphics/GraphicsDevice.hpp"
+#include "Graphics/VertexPositionColorSize.hpp"
 
 namespace Minigine
 {

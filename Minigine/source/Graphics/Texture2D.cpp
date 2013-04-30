@@ -1,8 +1,8 @@
 #include <fstream>
 #include <../Minigine.hpp>
+#include <../GLConfig.hpp>
 #include "Graphics/Texture2D.hpp"
 #include "InvalidOperationException.hpp"
-#include <../GLConfig.hpp>
 
 using std::ifstream;
 using std::ios;
