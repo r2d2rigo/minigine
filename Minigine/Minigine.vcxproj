@@ -104,6 +104,7 @@
     <ClInclude Include="include\Graphics\VertexPositionColorTexture.hpp" />
     <ClInclude Include="include\InvalidOperationException.hpp" />
     <ClInclude Include="include\Math\Matrix4x4F.hpp" />
+    <ClInclude Include="include\Math\RectangleF.hpp" />
     <ClInclude Include="include\Math\Vector2F.hpp" />
     <ClInclude Include="include\Math\Vector3F.hpp" />
     <ClInclude Include="Math.hpp" />

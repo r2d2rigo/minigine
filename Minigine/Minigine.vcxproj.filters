@@ -139,6 +139,9 @@
     <ClInclude Include="include\Graphics\VertexPositionColorSize.hpp">
       <Filter>include\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="include\Math\RectangleF.hpp">
+      <Filter>include\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
