@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B10794F173AFDBF0070970D /* Touch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B10794E173AFDBF0070970D /* Touch.cpp */; };
 		5B1290DF172C3BB400A76A2B /* VertexPositionColorSize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B1290DE172C3BB400A76A2B /* VertexPositionColorSize.cpp */; };
 		5B1290E2172C3C5200A76A2B /* VertexPositionColorTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B1290E1172C3C5200A76A2B /* VertexPositionColorTexture.cpp */; };
 		5B1290E4172C785F00A76A2B /* VertexPositionColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B1290E3172C785F00A76A2B /* VertexPositionColor.cpp */; };
@@ -52,6 +53,9 @@
 		5B0950FA1729E7AE00E49AAC /* VertexElementFormat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementFormat.hpp; sourceTree = "<group>"; };
 		5B0950FB1729E7AE00E49AAC /* VertexElementUsage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VertexElementUsage.hpp; sourceTree = "<group>"; };
 		5B0FFADA172B558000CEB0AC /* VertexPositionColorSize.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexPositionColorSize.hpp; sourceTree = "<group>"; };
+		5B10794C173AF9710070970D /* Touch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Touch.hpp; sourceTree = "<group>"; };
+		5B10794E173AFDBF0070970D /* Touch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Touch.cpp; path = Input/Touch.cpp; sourceTree = "<group>"; };
+		5B107950173B05050070970D /* TouchPosition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TouchPosition.hpp; sourceTree = "<group>"; };
 		5B1290DE172C3BB400A76A2B /* VertexPositionColorSize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColorSize.cpp; path = source/Graphics/VertexPositionColorSize.cpp; sourceTree = SOURCE_ROOT; };
 		5B1290E1172C3C5200A76A2B /* VertexPositionColorTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColorTexture.cpp; path = source/Graphics/VertexPositionColorTexture.cpp; sourceTree = SOURCE_ROOT; };
 		5B1290E3172C785F00A76A2B /* VertexPositionColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VertexPositionColor.cpp; path = source/Graphics/VertexPositionColor.cpp; sourceTree = SOURCE_ROOT; };
@@ -121,6 +125,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B10794A173AF95C0070970D /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				5B10794C173AF9710070970D /* Touch.hpp */,
+				5B107950173B05050070970D /* TouchPosition.hpp */,
+			);
+			name = Input;
+			path = include/Input;
+			sourceTree = "<group>";
+		};
+		5B10794D173AFD6E0070970D /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				5B10794E173AFDBF0070970D /* Touch.cpp */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
 		5BEBBF2D171B3D7000040379 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +192,7 @@
 		5BEBBF49171B3E3C00040379 /* Include */ = {
 			isa = PBXGroup;
 			children = (
+				5B10794A173AF95C0070970D /* Input */,
 				5BEBBF62171B3F1B00040379 /* Math.hpp */,
 				5BEBBF63171B3F1B00040379 /* Minigine.hpp */,
 				5BEBBF4F171B3EF900040379 /* Game.hpp */,
@@ -187,6 +210,7 @@
 		5BEBBF4A171B3E4800040379 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				5B10794D173AFD6E0070970D /* Input */,
 				5BEBBF66171B3F3800040379 /* Game.cpp */,
 				5BEBBF67171B3F3800040379 /* Graphics */,
 				5BEBBF71171B3F3800040379 /* InvalidOperationException.cpp */,
@@ -228,7 +252,7 @@
 			);
 			name = Graphics;
 			path = include/Graphics;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		5BEBBF5E171B3EF900040379 /* Math */ = {
 			isa = PBXGroup;
@@ -239,7 +263,7 @@
 			);
 			name = Math;
 			path = include/Math;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		5BEBBF67171B3F3800040379 /* Graphics */ = {
 			isa = PBXGroup;
@@ -343,6 +367,7 @@
 				5B1290DF172C3BB400A76A2B /* VertexPositionColorSize.cpp in Sources */,
 				5B1290E2172C3C5200A76A2B /* VertexPositionColorTexture.cpp in Sources */,
 				5B1290E4172C785F00A76A2B /* VertexPositionColor.cpp in Sources */,
+				5B10794F173AFDBF0070970D /* Touch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
