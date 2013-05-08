@@ -150,14 +150,19 @@ namespace Minigine
 					float xSize = currentElement.Size.GetX();
 					float ySize = currentElement.Size.GetY();
 
-                    Vector2F horzIncrement = Vector2F(xSize * angleCos, xSize * angleSin);
-                    Vector2F vertIncrement = Vector2F(ySize * -angleSin, ySize * angleCos);
+                    // TODO: let user specify origin
+                    Vector2F horzIncrement = Vector2F(xSize * angleCos * 0.5f, xSize * angleSin * 0.5f);
+                    Vector2F vertIncrement = Vector2F(ySize * -angleSin * 0.5f, ySize * angleCos * 0.5f);
 
                     // TODO: check if drawn texture is mirrored
-					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::One));
-					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement, currentElement.Color, Vector2F::UnitX));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position - horzIncrement - vertIncrement, currentElement.Color, Vector2F::One));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement - vertIncrement, currentElement.Color, Vector2F::UnitX));
 					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::Zero));
-					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
+					vertices.push_back(VertexPositionColorTexture(currentElement.Position - horzIncrement + vertIncrement, currentElement.Color, Vector2F::UnitY));
+//					vertices.push_back(VertexPositionColorTexture(currentElement.Position, currentElement.Color, Vector2F::One));
+//					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement, currentElement.Color, Vector2F::UnitX));
+//					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::Zero));
+//					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
 
                     if (currentElement.Texture != NULL)
                     {
