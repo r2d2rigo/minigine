@@ -121,9 +121,9 @@ using namespace Minigine;
         
         glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
         
-        glViewport(0, 0, 960, 640);
-  
         Game* currentGame = Game::GetRunningInstance();
+        glViewport(0, 0, currentGame->GetGraphicsDevice().GetScreenWidth(), currentGame->GetGraphicsDevice().GetScreenHeight());
+  
         currentGame->Update(0.0f);
         currentGame->Draw(0.0f);
         

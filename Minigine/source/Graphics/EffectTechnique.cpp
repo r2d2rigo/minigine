@@ -51,7 +51,7 @@ namespace Minigine
 		{
 			glUseProgram(this->programHandle);
 
-			Minigine::Math::Matrix4x4F id = Minigine::Math::Matrix4x4F::CreateOrthographic(0, 960, 0, 640, -1.0, 1.0f);
+			Minigine::Math::Matrix4x4F id = Minigine::Math::Matrix4x4F::CreateOrthographic(0, 480, 0, 320, -1.0, 1.0f);
 			glUniformMatrix4fv(0, 1, false, &id.m[0][0]);
 		}
 	}
