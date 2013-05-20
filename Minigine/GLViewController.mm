@@ -16,7 +16,13 @@ using namespace Minigine::Input;
 
 -(BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return YES;
+    if (toInterfaceOrientation == UIInterfaceOrientation::UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientation::UIInterfaceOrientationLandscapeRight)
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
