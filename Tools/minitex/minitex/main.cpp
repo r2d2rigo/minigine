@@ -4,22 +4,24 @@
 
 using namespace std;
 
-int main(int argc, const char * argv[])
+int main(int argc, const char* argv[])
 {
-#if _DEBUG || DEBUG
-    #if WIN32
-        char* path = "ship1.png";
-    #else
-        char* path = "/Users/Rodrigo/Downloads/Misc2D/ship1.png";
-    #endif
-#else
+//#if _DEBUG || DEBUG
+//    #if WIN32
+//        char* path = "ship1.png";
+//    #else
+//        char* path = "/Users/Rodrigo/Downloads/Misc2D/ship1.png";
+//    #endif
+//#else
     if (argc < 2)
     {
         cout << "Bad usage" << endl;
     
         return -1;
     }
-#endif
+    
+    const char* path = argv[1];
+//#endif
         
     FIBITMAP* sourceImage = FreeImage_Load(FIF_PNG, path);
 
