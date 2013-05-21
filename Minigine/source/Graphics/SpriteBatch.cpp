@@ -30,6 +30,7 @@ namespace Minigine
             
             this->indexBuffer.SetData(sizeof(unsigned short) * SpriteBatch::MaxBatchSize * 4, &indices[0]);
             
+            this->previousTexture = NULL;
 			this->graphicsDevice = parentDevice;
 		}
 
@@ -133,16 +134,25 @@ namespace Minigine
 			{
 				throw InvalidOperationException("Begin must be called before calling End.");
 			}
+            
+            // TODO: rewrite the counter management.
+            int drawnElements = 0;
 
-			if (this->elementCount > 0)
+            while (drawnElements < this->elementCount)
 			{
+                int batchElements = 0;
 				// TODO: don't clear. Overwrite members.
 				this->vertices.clear();
 
 				// TODO: use iterators?
-				for (int i = 0; i < this->elementCount; ++i)
+				for (int i = drawnElements; i < this->elementCount; ++i)
 				{
 					SpriteBatchElement& currentElement = this->elements[i];
+                    if (this->previousTexture != NULL && this->previousTexture->GetHandle() != currentElement.Texture->GetHandle())
+                    {
+                        this->previousTexture = NULL;
+                        break;
+                    }
                     
                     float angleSin = sin(currentElement.Rotation);
                     float angleCos = cos(currentElement.Rotation);
@@ -164,9 +174,13 @@ namespace Minigine
 //					vertices.push_back(VertexPositionColorTexture(currentElement.Position + horzIncrement + vertIncrement, currentElement.Color, Vector2F::Zero));
 //					vertices.push_back(VertexPositionColorTexture(currentElement.Position + vertIncrement, currentElement.Color, Vector2F::UnitY));
 
+                    drawnElements++;
+                    batchElements++;
+                    
                     if (currentElement.Texture != NULL)
                     {
                         glBindTexture(GL_TEXTURE_2D, currentElement.Texture->GetHandle());
+                        this->previousTexture = currentElement.Texture;
                     }
 				}
 
@@ -177,11 +191,10 @@ namespace Minigine
 				this->vertexBuffer.SetData(sizeof(VertexPositionColorTexture) * vertices.size(), &vertices[0]);
 				this->graphicsDevice.SetIndexBuffer(this->indexBuffer);
 				this->graphicsDevice.SetVertexBuffer(this->vertexBuffer);
-				this->graphicsDevice.Draw(PrimitiveType::TriangleList, this->elementCount * 2);
-
-				this->elementCount = 0;
+				this->graphicsDevice.Draw(PrimitiveType::TriangleList, batchElements * 2);
 			}
 
+            this->elementCount = 0;
 			this->alreadyDrawing = false;
 		}
 	}

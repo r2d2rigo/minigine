@@ -30,6 +30,7 @@ namespace Minigine
 			vector<SpriteBatchElement> elements;
 			vector<VertexPositionColorTexture> vertices;
 			int elementCount;
+            Texture2D* previousTexture;
 
 		public:
 			SpriteBatch(const GraphicsDevice& parentDevice);
